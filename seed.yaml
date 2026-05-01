@@ -11,4 +11,5 @@ metadata:
   client: "Rob Bonavoglia"
   brand: "Hokage Chess"
   channel: "https://www.youtube.com/@HokageChess"
+  dual_purpose: true
   last_validated: "2026-04-25"

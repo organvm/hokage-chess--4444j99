@@ -153,3 +153,5 @@ This document complies with its own substrate:
 - **Quotes Maddie session content?** No — only title and session ID, both metadata.
 - **Right scope?** v0 hosted in `{client:rob}` is acknowledged as an awkward placement (preamble) with canonical home in workspace meta-governance.
 - **Live-paste rule applied to authoring agent?** Yes — the agent that authored this doc did not absorb the pasted Maddie session content into hokage-chess auto-memory; it saved the *rule*, not the *body*.
+
+> **Canonical home:** see [CANONICAL-HOME-ANCHOR.md](./CANONICAL-HOME-ANCHOR.md) — this v0 lives at hokage-chess/docs/governance/ for session-scope reasons; Phase 3 promotes to meta-organvm/governance/.
