@@ -4,7 +4,7 @@
  * adjacency rules (chess pillars, not health pillars).
  */
 
-import type { Persona } from "./personas";
+import type { Persona, PillarId } from "./personas";
 
 export type SectionType = "hero" | "problem" | "three-paths" | "cta";
 
@@ -51,8 +51,11 @@ export type SectionData =
 /**
  * Three-roads adjacency: which two pillars sit alongside each persona's
  * primary stat. Pulled from the v2 Character Sheet stat-coupling logic.
+ *
+ * Exported because /pillars/[slug] and /for/[persona]/[pillar] routes
+ * compose adjacency grids from the same source — no drift, one schema.
  */
-const PILLAR_ADJACENCY: Record<string, [string, string, string]> = {
+export const PILLAR_ADJACENCY: Record<PillarId, [PillarId, PillarId, PillarId]> = {
   tactics: ["tactics", "calculation", "strategy"],
   strategy: ["strategy", "endgame", "tilt-resistance"],
   calculation: ["calculation", "tactics", "endgame"],
@@ -61,7 +64,12 @@ const PILLAR_ADJACENCY: Record<string, [string, string, string]> = {
   "tilt-resistance": ["tilt-resistance", "time-management", "strategy"],
 };
 
-const PILLAR_DESCRIPTIONS: Record<string, string> = {
+/**
+ * One-sentence pillar descriptions keyed by the pillar's mythic label
+ * (Forge / Library / Lab / Crucible / Clock / Dojo). Same source feeds
+ * adjacency cards on persona pages and hero copy on pillar pages.
+ */
+export const PILLAR_DESCRIPTIONS: Record<PillarId, string> = {
   tactics: "The Forge — pattern recognition until your eyes see threats before you can name them.",
   strategy: "The Library — long-term plans, pawn structures, when not to grab the material.",
   calculation: "The Lab — concrete lines deeper than your opponent will go.",
@@ -70,11 +78,32 @@ const PILLAR_DESCRIPTIONS: Record<string, string> = {
   "tilt-resistance": "The Dojo — losing the game without losing the next one.",
 };
 
+/**
+ * Short label (e.g. "The Forge") extracted from PILLAR_DESCRIPTIONS for
+ * use in route titles, hero kickers, and metadata. Falls back to a
+ * humanized slug if the description is mis-shaped.
+ */
+export function getPillarLabel(pillar: PillarId): string {
+  const desc = PILLAR_DESCRIPTIONS[pillar];
+  const match = desc?.match(/^([^—]+?)\s*—/);
+  return match ? match[1].trim() : pillar.replace("-", " ");
+}
+
+/**
+ * Optional pillar-focus override. When set, hero/three-paths sections
+ * pivot adjacency + label to the focus pillar instead of the persona's
+ * primary pillar — used by /for/[persona]/[pillar] long-tail routes.
+ */
+export interface SectionBuildOptions {
+  pillarFocus?: PillarId;
+}
+
 export const SectionBuilders = {
-  hero(persona: Persona): HeroSectionProps {
+  hero(persona: Persona, opts: SectionBuildOptions = {}): HeroSectionProps {
+    const focus: PillarId = opts.pillarFocus ?? persona.primaryPillar;
     return {
       type: "hero",
-      pillarLabel: persona.primaryPillar.replace("-", " "),
+      pillarLabel: focus.replace("-", " "),
       ratingBand: persona.ratingBand,
       heading: persona.label,
       subhead: persona.heroHook,
@@ -82,19 +111,16 @@ export const SectionBuilders = {
       ctaHref: "#cta",
     };
   },
-  problem(_persona: Persona): ProblemSectionProps {
+  problem(persona: Persona): ProblemSectionProps {
     return {
       type: "problem",
       heading: "The grinding middle.",
-      painPoints: _persona.pain,
+      painPoints: persona.pain,
     };
   },
-  threePaths(persona: Persona): ThreePathsSectionProps {
-    const adj = PILLAR_ADJACENCY[persona.primaryPillar] ?? [
-      "tactics",
-      "strategy",
-      "endgame",
-    ];
+  threePaths(persona: Persona, opts: SectionBuildOptions = {}): ThreePathsSectionProps {
+    const root: PillarId = opts.pillarFocus ?? persona.primaryPillar;
+    const adj = PILLAR_ADJACENCY[root] ?? PILLAR_ADJACENCY.tactics;
     return {
       type: "three-paths",
       heading: "Three roads in.",

@@ -114,3 +114,25 @@ export function getPersona(id: PersonaId): Persona {
   if (!p) throw new Error(`unknown persona: ${id}`);
   return p;
 }
+
+/**
+ * Canonical six-pillar enumeration. Drives generateStaticParams for both
+ * /pillars/[slug] and /for/[persona]/[pillar] routes — and any future
+ * pillar-keyed surface that needs to know "what are the pillars?"
+ */
+export const PILLAR_IDS: readonly PillarId[] = [
+  "tactics",
+  "strategy",
+  "calculation",
+  "endgame",
+  "time-management",
+  "tilt-resistance",
+] as const;
+
+export function listPillars(): PillarId[] {
+  return [...PILLAR_IDS];
+}
+
+export function isPillarId(value: string): value is PillarId {
+  return (PILLAR_IDS as readonly string[]).includes(value);
+}
