@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+# Pre-commit hook for hokage-chess.
+#
+# Runs in this order:
+#   1. Cross-client bleed guard (V-A from client-separation-substrate.md)
+#   2. User-global secret scanner (chained from $HOME/.config/git/hooks/pre-commit
+#      if present; preserved across husky's core.hooksPath override).
+#
+# Husky v9 sets core.hooksPath=.husky on `npm install`. That overrides any other
+# hookspath, including the user-global one in $HOME/.config/git/hooks/.
+# We chain explicitly to keep the existing secret scanner active for operators
+# who have one configured. Contributors without that file simply skip the chain.
+
+# 1. Cross-client bleed guard (V-A)
+bash scripts/check-cross-client-bleed.sh
+
+# 2. Chain to user-global secret scanner if available.
+if [ -x "$HOME/.config/git/hooks/pre-commit" ]; then
+  exec "$HOME/.config/git/hooks/pre-commit" "$@"
+fi
