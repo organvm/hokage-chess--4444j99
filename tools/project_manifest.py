@@ -12,12 +12,20 @@ import re
 import subprocess
 import sys
 import zipfile
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
+try:
+    import yaml  # type: ignore[import-untyped]
+except ImportError:  # pragma: no cover - PyYAML required for frontmatter parsing
+    yaml = None  # type: ignore[assignment]
 
-EXCLUDED_DIRS = {".git", "node_modules", ".next", "__pycache__"}
+
+EXCLUDED_DIRS = {
+    ".git", "node_modules", ".next", "__pycache__",
+    ".history", ".lh", ".gemini",
+}
 SELF_MANIFEST_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-project-manifest-annotated-bibliography\.(jsonl|md)$")
 TEXT_SUFFIXES = {
     ".css", ".csv", ".html", ".ini", ".js", ".json", ".jsonl", ".jsx", ".lock",
@@ -41,6 +49,7 @@ class ManifestEntry:
     extract_status: str
     annotation: str
     thread_id: str
+    references: list[str] = field(default_factory=list)
 
 
 def sha256_file(path: Path) -> str:
@@ -163,11 +172,53 @@ def classify_kind(path: Path) -> str:
     return "file"
 
 
+FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*(?:\n|$)", re.DOTALL)
+
+
+def parse_frontmatter_tags(text: str) -> list[str]:
+    """Parse YAML frontmatter tags from a text head.
+
+    Returns a list of stringified tag values, deduplicated. Silently skips when
+    PyYAML is unavailable, when no frontmatter is present, when the YAML is
+    malformed, or when ``tags`` is missing/empty/non-iterable.
+    """
+    if yaml is None or not text:
+        return []
+    match = FRONTMATTER_RE.match(text)
+    if not match:
+        return []
+    try:
+        data = yaml.safe_load(match.group(1))
+    except yaml.YAMLError:
+        return []
+    if not isinstance(data, dict):
+        return []
+    raw = data.get("tags")
+    if not raw:
+        return []
+    if isinstance(raw, str):
+        raw = [raw]
+    elif not isinstance(raw, (list, tuple, set)):
+        return []
+    out: list[str] = []
+    seen: set[str] = set()
+    for item in raw:
+        if item is None:
+            continue
+        s = str(item).strip()
+        if s and s not in seen:
+            seen.add(s)
+            out.append(s)
+    return out
+
+
 def tags_for(path: Path, kind: str, text: str) -> list[str]:
     tags = {kind, path.suffix.lower().lstrip(".") or "no-extension"}
     for part in path.parts[:-1]:
         if part not in {".", ""}:
             tags.add(part)
+    for fm_tag in parse_frontmatter_tags(text):
+        tags.add(fm_tag)
     lower = text.lower()
     keywords = {
         "rob": "rob",
@@ -221,6 +272,60 @@ def thread_group(path: Path, kind: str) -> str:
     if p.startswith("public/"):
         return "public-assets-thread"
     return "project-root-thread"
+
+
+_REF_IRF_RE = re.compile(r"\bIRF-PRT-\d{3,}\b")
+_REF_PRT_RE = re.compile(r"\bPRT-\d{3,}\b")
+_REF_SHA_RE = re.compile(r"\b[a-f0-9]{7,40}\b")
+_REF_PATH_RE = re.compile(r"[a-z][a-z0-9/_\-.]*\.(?:md|tsx|ts|yaml|json|py)\b")
+_REF_ISSUE_BRACKET_RE = re.compile(r"\[#(\d+)\]")
+_REF_ISSUE_CONTEXT_RE = re.compile(
+    r"\b(?:issue|issues|pr|prs|pull|pull-request|gh|fixes|closes|resolves)[\s:#-]*#(\d+)\b",
+    re.IGNORECASE,
+)
+_SHA_FALSE_POSITIVE_PREFIX_RE = re.compile(r"(?:0x|#)$", re.IGNORECASE)
+
+
+def _filter_sha_false_positives(content: str, sha: str, start: int) -> bool:
+    """Heuristic: drop tokens that look like commits but are pure-digit IDs or hex literals."""
+    if not re.search(r"[a-f]", sha):
+        return False
+    prefix = content[max(0, start - 2):start]
+    if _SHA_FALSE_POSITIVE_PREFIX_RE.search(prefix):
+        return False
+    return True
+
+
+def extract_references(content: str) -> list[str]:
+    """Extract cross-document references for edge-list construction.
+
+    Patterns:
+    - IRF row IDs: ``IRF-PRT-NNN``
+    - PRT short IDs: ``PRT-NNN``
+    - Git commit SHAs (7+ hex), filtered for obvious false positives
+    - File paths with ``.md/.ts/.tsx/.yaml/.json/.py`` suffixes
+    - GH issue refs: ``[#NNN]`` or in PR/issue context (``fixes #NNN`` etc.)
+
+    Returns deduplicated, sorted list.
+    """
+    if not content:
+        return []
+    refs: set[str] = set()
+    irf_refs = _REF_IRF_RE.findall(content)
+    refs.update(irf_refs)
+    # Skip bare PRT-NNN matches that are subsumed by an IRF-PRT-NNN ID.
+    irf_suffixes = {ref.split("IRF-", 1)[1] for ref in irf_refs}
+    for prt in _REF_PRT_RE.findall(content):
+        if prt not in irf_suffixes:
+            refs.add(prt)
+    for m in _REF_SHA_RE.finditer(content):
+        sha = m.group(0)
+        if _filter_sha_false_positives(content, sha, m.start()):
+            refs.add(sha)
+    refs.update(_REF_PATH_RE.findall(content))
+    refs.update(f"#{n}" for n in _REF_ISSUE_BRACKET_RE.findall(content))
+    refs.update(f"#{n}" for n in _REF_ISSUE_CONTEXT_RE.findall(content))
+    return sorted(refs)
 
 
 def annotation_for(path: Path, kind: str, text: str, status: str) -> str:
@@ -283,6 +388,7 @@ def build_entries(root: Path) -> tuple[list[ManifestEntry], dict[str, str]]:
                 extract_status=status,
                 annotation=annotation_for(rel, kind, text, status),
                 thread_id=thread_ids[thread_key],
+                references=extract_references(text),
             )
         )
     return entries, thread_ids
@@ -323,7 +429,7 @@ def write_outputs(root: Path, entries: list[ManifestEntry], thread_ids: dict[str
         f"- Generated: {dt.datetime.now(dt.timezone.utc).isoformat()}",
         f"- Project root: `{root}`",
         f"- Included files: {len(entries)}",
-        "- Excluded from bibliographic entries: `.git/`, `node_modules/`, `.next/`.",
+        f"- Excluded from bibliographic entries: {', '.join(f'`{name}/`' for name in sorted(EXCLUDED_DIRS))}.",
         "- ID policy: `HOK-FILE-####` and `HOK-THREAD-####` assigned deterministically by sorted path/group.",
         "- Extraction policy: text/code/Markdown/HTML/JSON/YAML/SVG read directly; PDF via `pdftotext`; DOCX/XLSX via OOXML extraction; opaque binaries get metadata-only entries.",
         "",
@@ -355,13 +461,17 @@ def write_outputs(root: Path, entries: list[ManifestEntry], thread_ids: dict[str
     )
     for thread_id in sorted(by_thread):
         label = labels.get(thread_id, "unknown-thread")
-        lines.append(f"- **{thread_id}** `{label}`: {len(by_thread[thread_id])} files")
+        ref_total = sum(len(e.references) for e in by_thread[thread_id])
+        lines.append(
+            f"- **{thread_id}** `{label}`: {len(by_thread[thread_id])} files, {ref_total} references"
+        )
     lines.extend(["", "## Annotated Bibliography", ""])
     for thread_id in sorted(by_thread):
         label = labels.get(thread_id, "unknown-thread")
         lines.extend([f"### {thread_id} `{label}`", ""])
         for entry in sorted(by_thread[thread_id], key=lambda e: e.path):
             tag_text = ", ".join(f"`{tag}`" for tag in entry.tags)
+            ref_count = len(entry.references)
             lines.extend(
                 [
                     f"#### {entry.id}: {entry.title}",
@@ -372,6 +482,7 @@ def write_outputs(root: Path, entries: list[ManifestEntry], thread_ids: dict[str
                     f"- Modified UTC: `{entry.modified}`",
                     f"- Tags: {tag_text}",
                     f"- Extraction: `{entry.extract_status}`",
+                    f"- References: {ref_count}",
                     f"- Annotation: {entry.annotation}",
                     "",
                 ]
