@@ -1,0 +1,185 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CtaSection > renders the closing CTA panel 1`] = `
+<DocumentFragment>
+  <section
+    class="relative px-6 py-32 max-w-[760px] mx-auto text-center"
+    id="cta"
+  >
+    <h2
+      class="font-heading text-[clamp(32px,4vw,52px)] font-bold uppercase text-white leading-tight"
+    >
+      Climb the rating ladder.
+    </h2>
+    <p
+      class="mt-6 text-[17px] font-light leading-relaxed text-white/60"
+    >
+      Win drawn games. Stop losing won ones.
+    </p>
+    <a
+      class="mt-10 inline-flex items-center px-8 py-4 rounded-full bg-hokage-red text-white text-sm font-semibold uppercase tracking-wide hover:bg-red-600 transition-colors"
+      href="/#join"
+    >
+      Start the climb
+    </a>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`HeroSection > renders hero with the full prop contract 1`] = `
+<DocumentFragment>
+  <section
+    class="relative min-h-[85vh] flex flex-col items-center justify-center text-center px-6 py-24 bg-black overflow-hidden"
+  >
+    <p
+      class="font-mono text-[11px] tracking-[0.25em] uppercase text-hokage-red mb-2"
+    >
+      the forge
+    </p>
+    <p
+      class="font-mono text-[11px] tracking-[0.2em] uppercase text-white/40 mb-8"
+    >
+      1000–1400
+    </p>
+    <h1
+      class="font-heading text-[clamp(40px,6vw,76px)] font-bold leading-[1.05] tracking-tight text-white uppercase"
+    >
+      The Stuck Beginner
+    </h1>
+    <p
+      class="mt-8 text-[17px] font-light leading-relaxed text-white/60 max-w-[640px]"
+    >
+      Patterns over panic.
+    </p>
+    <a
+      class="mt-10 inline-flex items-center px-8 py-4 rounded-full bg-hokage-red text-white text-sm font-semibold uppercase tracking-wide hover:bg-red-600 transition-colors"
+      href="#cta"
+    >
+      Start the climb
+    </a>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`ProblemSection > renders pain points as an enumerated list 1`] = `
+<DocumentFragment>
+  <section
+    class="relative px-6 py-24 max-w-[860px] mx-auto"
+  >
+    <h2
+      class="font-heading text-[clamp(28px,3.5vw,44px)] font-bold uppercase text-white leading-tight"
+    >
+      The grinding middle.
+    </h2>
+    <ul
+      class="mt-10 space-y-6"
+    >
+      <li
+        class="flex gap-4"
+      >
+        <span
+          class="text-hokage-red font-mono shrink-0 select-none"
+        >
+          01
+        </span>
+        <p
+          class="text-[17px] font-light leading-relaxed text-white/70"
+        >
+          You blunder pieces in the middlegame.
+        </p>
+      </li>
+      <li
+        class="flex gap-4"
+      >
+        <span
+          class="text-hokage-red font-mono shrink-0 select-none"
+        >
+          02
+        </span>
+        <p
+          class="text-[17px] font-light leading-relaxed text-white/70"
+        >
+          Openings dissolve once theory ends.
+        </p>
+      </li>
+      <li
+        class="flex gap-4"
+      >
+        <span
+          class="text-hokage-red font-mono shrink-0 select-none"
+        >
+          03
+        </span>
+        <p
+          class="text-[17px] font-light leading-relaxed text-white/70"
+        >
+          Tilt eats the second game.
+        </p>
+      </li>
+    </ul>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`ThreePathsSection > renders the three-path adjacency grid 1`] = `
+<DocumentFragment>
+  <section
+    class="relative px-6 py-24 max-w-[1080px] mx-auto"
+  >
+    <h2
+      class="font-heading text-[clamp(28px,3.5vw,44px)] font-bold uppercase text-white leading-tight text-center"
+    >
+      Three roads in.
+    </h2>
+    <div
+      class="mt-14 grid gap-6 md:grid-cols-3"
+    >
+      <a
+        class="group block p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-hokage-red/40 transition-colors"
+        href="/pillars/tactics"
+      >
+        <p
+          class="font-mono text-[11px] tracking-[0.25em] uppercase text-hokage-red mb-3"
+        >
+          tactics
+        </p>
+        <p
+          class="text-[15px] font-light leading-relaxed text-white/60 group-hover:text-white/80 transition-colors"
+        >
+          The Forge — pattern recognition until your eyes see threats before you can name them.
+        </p>
+      </a>
+      <a
+        class="group block p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-hokage-red/40 transition-colors"
+        href="/pillars/calculation"
+      >
+        <p
+          class="font-mono text-[11px] tracking-[0.25em] uppercase text-hokage-red mb-3"
+        >
+          calculation
+        </p>
+        <p
+          class="text-[15px] font-light leading-relaxed text-white/60 group-hover:text-white/80 transition-colors"
+        >
+          The Lab — concrete lines deeper than your opponent will go.
+        </p>
+      </a>
+      <a
+        class="group block p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-hokage-red/40 transition-colors"
+        href="/pillars/strategy"
+      >
+        <p
+          class="font-mono text-[11px] tracking-[0.25em] uppercase text-hokage-red mb-3"
+        >
+          strategy
+        </p>
+        <p
+          class="text-[15px] font-light leading-relaxed text-white/60 group-hover:text-white/80 transition-colors"
+        >
+          The Library — long-term plans, pawn structures, when not to grab the material.
+        </p>
+      </a>
+    </div>
+  </section>
+</DocumentFragment>
+`;
