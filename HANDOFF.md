@@ -18,8 +18,8 @@ This file tracks two distinct vacuum namespaces from different originating sessi
 
 | Vacuum | Issue | Priority | What |
 |--------|-------|----------|------|
-| V-A | [#47](https://github.com/4444J99/hokage-chess/issues/47) | P1 | Phase 2 pre-commit guard (cross-client keyword bleed) |
-| V-B | [#48](https://github.com/4444J99/hokage-chess/issues/48) | P2 | Phase 3 canonical-home promotion + seed.yaml schema normalization |
+| V-A | [#47](https://github.com/4444J99/hokage-chess/issues/47) | P1 | Phase 2 pre-commit guard (cross-client keyword bleed) — ✓ PR #61 merged 2026-05-02 (`c02797d`) |
+| V-B | [#48](https://github.com/4444J99/hokage-chess/issues/48) | P2 | Phase 3 canonical-home promotion + seed.yaml schema normalization — ⊘ partial: PR #54 merged 2026-05-02 (`ad7ced8`) lands the anchor + `dual_purpose` flag; cross-repo migration to `meta-organvm/governance/` still deferred |
 | V-C | [#49](https://github.com/4444J99/hokage-chess/issues/49) | P2 | Phase 4 conductor MCP scope-binding |
 | V-D | [#50](https://github.com/4444J99/hokage-chess/issues/50) | P1 | Maddie-side parallel substrate (tracking proxy — actual work on Maddie repo) |
 | V-E | [#51](https://github.com/4444J99/hokage-chess/issues/51) | P2 | Cross-scope conventions reconciliation (transcript-routing drift) |
@@ -249,8 +249,8 @@ User-pasted Maddie-intent session-export ("Editing flow: vacuum gate, quiz copy,
 **Memory captures:** `feedback_client_separation_substrate.md` + MEMORY.md index updated. Substrate-rule only — no Maddie session content quoted into Hokage auto-memory.
 
 **Vacuums atomized — now triple-referenced (HANDOFF + active-handoff + GH issues, 2026-04-30 evening):**
-- V-A → [#47](https://github.com/4444J99/hokage-chess/issues/47) — Phase 2 pre-commit guard (cross-client keyword bleed)
-- V-B → [#48](https://github.com/4444J99/hokage-chess/issues/48) — Phase 3 substrate-doc canonical-home promotion + seed.yaml schema normalization
+- V-A → [#47](https://github.com/4444J99/hokage-chess/issues/47) — Phase 2 pre-commit guard (cross-client keyword bleed) · ✓ PR #61 merged 2026-05-02 (`c02797d`)
+- V-B → [#48](https://github.com/4444J99/hokage-chess/issues/48) — Phase 3 substrate-doc canonical-home promotion + seed.yaml schema normalization · ⊘ PR #54 merged 2026-05-02 (`ad7ced8`) — partial: anchor + `dual_purpose` only; cross-repo migration deferred
 - V-C → [#49](https://github.com/4444J99/hokage-chess/issues/49) — Phase 4 conductor MCP scope-binding (`conductor_session_start` requires `client` param when CWD ∈ client tree)
 - V-D → [#50](https://github.com/4444J99/hokage-chess/issues/50) — Maddie-side parallel substrate (tracking proxy on this repo; actual work lands on `organvm/sovereign-systems--elevate-align`)
 - V-E → [#51](https://github.com/4444J99/hokage-chess/issues/51) — Cross-scope conventions reconciliation (transcript-routing drift between Maddie convention and this substrate)
