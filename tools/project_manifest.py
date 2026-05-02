@@ -277,7 +277,7 @@ def thread_group(path: Path, kind: str) -> str:
 _REF_IRF_RE = re.compile(r"\bIRF-PRT-\d{3,}\b")
 _REF_PRT_RE = re.compile(r"\bPRT-\d{3,}\b")
 _REF_SHA_RE = re.compile(r"\b[a-f0-9]{7,40}\b")
-_REF_PATH_RE = re.compile(r"[a-z][a-z0-9/_\-.]*\.(?:md|tsx|ts|yaml|json|py)\b")
+_REF_PATH_RE = re.compile(r"[a-z][a-z0-9/_\-.]*\.(?:md|tsx|ts|yaml|json|py)\b", re.IGNORECASE)
 _REF_ISSUE_BRACKET_RE = re.compile(r"\[#(\d+)\]")
 _REF_ISSUE_CONTEXT_RE = re.compile(
     r"\b(?:issue|issues|pr|prs|pull|pull-request|gh|fixes|closes|resolves)[\s:#-]*#(\d+)\b",
