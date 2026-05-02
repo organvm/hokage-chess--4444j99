@@ -34,7 +34,7 @@ describe("HeroSection", () => {
       heading: "The Stuck Beginner",
       subhead: "Patterns over panic.",
       ctaLabel: "Start the climb",
-      ctaHref: "#cta",
+      ctaHref: "/#email-capture",
     };
     const { asFragment } = render(<HeroSection data={data} />);
     expect(asFragment()).toMatchSnapshot();

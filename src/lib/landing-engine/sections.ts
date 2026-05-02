@@ -108,7 +108,7 @@ export const SectionBuilders = {
       heading: persona.label,
       subhead: persona.heroHook,
       ctaLabel: persona.ctaCommit,
-      ctaHref: "#cta",
+      ctaHref: "/#email-capture",
     };
   },
   problem(persona: Persona): ProblemSectionProps {
