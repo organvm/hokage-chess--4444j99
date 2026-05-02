@@ -95,7 +95,7 @@ describe("CtaSection", () => {
       heading: "Climb the rating ladder.",
       subhead: "Win drawn games. Stop losing won ones.",
       ctaLabel: "Start the climb",
-      ctaHref: "/#join",
+      ctaHref: "/#email-capture",
     };
     const { asFragment } = render(<CtaSection data={data} />);
     expect(asFragment()).toMatchSnapshot();

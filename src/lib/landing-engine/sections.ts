@@ -137,7 +137,7 @@ export const SectionBuilders = {
       heading: persona.desire[0] ?? "Begin the climb.",
       subhead: persona.desire.slice(1).join(" ") || persona.heroHook,
       ctaLabel: persona.ctaCommit,
-      ctaHref: "/#join",
+      ctaHref: "/#email-capture",
     };
   },
 } as const;
