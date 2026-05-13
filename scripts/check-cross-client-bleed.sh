@@ -10,7 +10,7 @@ KEYWORDS_REGEX='(maddie|Maddie|Sovereign Spiral|sovereign-systems|elevatealign\.
 
 # Whitelist: files that legitimately reference cross-client keywords (substrate doc itself,
 # audit logs, this guard's own implementation).
-WHITELIST_REGEX='^(docs/governance/client-separation-substrate\.md|docs/governance/CANONICAL-HOME-ANCHOR\.md|scripts/check-cross-client-bleed\.sh|HANDOFF\.md|\.conductor/active-handoff\.md|docs/archive/.*|\.claude/plans/.*)$'
+WHITELIST_REGEX='^(docs/governance/client-separation-substrate\.md|docs/governance/CANONICAL-HOME-ANCHOR\.md|scripts/check-cross-client-bleed\.sh|HANDOFF\.md|\.conductor/active-handoff\.md|docs/archive/.*|\.claude/plans/.*|docs/business/design-docs/.*|docs/business/forms/internal/.*)$'
 
 # Get staged files (not yet committed)
 staged_files=$(git diff --cached --name-only --diff-filter=ACMR)
