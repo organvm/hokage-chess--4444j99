@@ -1,0 +1,152 @@
+# Hokage Chess — agent-fleet roles
+# Generated from: docs/substrate/hokage/05-agent-fleet/README.md
+# Format mirrors: docs/substrate/bodi/05-agent-fleet/bodi-agent-fleet.yaml
+# Status: SKELETON — owner assignments UNASSIGNED; automation specs deferred to Phase-1 assignment
+# Last updated: 2026-06-01 (30-day TBD sweep)
+
+roles:
+  - id: title-editor
+    mission: >
+      Audit top 20 videos; push "Episode X" markers to title suffix;
+      enforce [EMOTION or STAKES] + [CONTEXT] formula;
+      A/B test title-only changes; apply <3% CTR = new title within 48h red line
+    cadence: weekly review; 48h response on CTR red-line trigger
+    inputs:
+      - youtube-channel-analytics
+      - top-20-video-list
+    outputs:
+      - updated-video-titles
+      - a-b-test-log
+    current_owner: unassigned
+    automation_candidate: true
+    notes: >
+      High-cadence, low-cognitive-load role; first target for AI-assisted operator handoff.
+      CTR red line (<3%) is the primary trigger.
+
+  - id: thumbnail-ab-tester
+    mission: >
+      Design thumbnails consistent with authentic-climber positioning (no clickbait conflict);
+      run A/B pairs tied to title-editor cadence
+    cadence: tied to title-editor; one new A/B pair per title test
+    inputs:
+      - title-a-b-test-log
+      - brand-palette  # hokage-red #C41E3A, dark mode, Oswald headlines
+    outputs:
+      - thumbnail-variants
+      - a-b-test-pairs
+    current_owner: unassigned
+    automation_candidate: false
+    notes: >
+      Requires visual design judgment for authentic-climber positioning.
+      Reject clickbait approaches that conflict with Rob's brand voice.
+
+  - id: lead-magnet-builder
+    mission: >
+      Mine last 30 games for typical-1300-instinct positions; write 7-position breakdown;
+      design in Canva; export PDF; host on Google Drive or Gumroad free;
+      wire CTA into YouTube descriptions and channel About tab
+    cadence: one-time Phase-1 deliverable; v2 driven by viewer-submitted positions
+    inputs:
+      - rob-game-archive  # Chess.com or Lichess export; NEEDS: Rob to share
+    outputs:
+      - 1300-escape-plan.pdf
+      - canva-source-file
+      - hosting-url  # NEEDS: Google Drive or Gumroad free account
+      - cta-copy
+    current_owner: unassigned
+    automation_candidate: false
+    notes: >
+      Rob selects positions collaboratively; Anthony writes breakdown copy.
+      Blocked on game archive access and position selection session with Rob.
+
+  - id: email-curator
+    mission: >
+      Configure Kit (ConvertKit) free tier; draft 3-email welcome sequence
+      (who-I-am / embarrassing-loss / Village invite);
+      ship once lead magnet is live; maintain "The Scroll" list
+    cadence: setup one-time; weekly broadcast once list >100 subscribers
+    inputs:
+      - kit-account-credentials  # NEEDS: Rob to create Kit free account
+      - lead-magnet-hosting-url
+    outputs:
+      - kit-welcome-sequence  # 3 emails
+      - the-scroll-list-id   # NEEDS: populate once account exists
+      - weekly-broadcast-drafts
+    current_owner: unassigned
+    automation_candidate: false
+    notes: >
+      Blocked on Kit account setup (V7 vacuum in HANDOFF.md).
+      Kit list ID required to wire the subscribe form in src/app/api/subscribe/route.ts.
+
+  - id: shorts-cutter
+    mission: >
+      Daily vertical puzzle format (1/day × 28); position-on-screen open, no intro;
+      hook reveal at 30s; consistent template, low overhead
+    cadence: daily × 28-day Phase-1 sprint; weekly minimum thereafter
+    inputs:
+      - puzzle-position  # board screenshot or PGN
+      - short-format-template  # NEEDS: template to be built
+    outputs:
+      - youtube-short-draft
+    current_owner: unassigned
+    automation_candidate: true
+    notes: >
+      Consistent template structure reduces per-short production overhead.
+      Template not yet built; build once first Jutsu-of-the-Week episode lands.
+
+  - id: bridge-content-producer
+    mission: >
+      Tuesday "Jutsu of the Week" (8–12 min long-form + 60–90s Shorts re-cut);
+      monthly "Boss Battle" (Park / Online / Title / Echo variants — Echo recommended for Episode 1)
+    cadence: weekly Tuesday (Jutsu); monthly (Boss Battle)
+    inputs:
+      - jutsu-concept-selection  # Rob selects technique
+      - boss-battle-format-choice  # Echo for Episode 1 (lowest scheduling friction)
+    outputs:
+      - jutsu-of-the-week-video
+      - boss-battle-video
+      - re-cut-short  # 60–90s version of Jutsu episode
+    current_owner: Rob Bonavoglia  # creator executes; Anthony coaches format during engagement
+    automation_candidate: false
+    notes: >
+      Rob executes this role; Anthony's engagement-period role is format coaching + cadence accountability.
+      Echo Boss Battle variant recommended for Episode 1 — no opponent scheduling required.
+
+  - id: discord-moderator
+    mission: >
+      Stand up three role tiers (Genin / Chunin / Jonin) and three channels
+      (#jutsu-of-the-week, #sparring-partners, #study-hall);
+      curate to first 50 active members; resist broadcast scaling
+    cadence: daily moderation during Phase-1 ramp; weekly active-member review
+    inputs:
+      - discord-server-id  # NEEDS: Rob to create Discord server
+      - role-tier-criteria  # ELO band: Genin 0–1199, Chunin 1200–1599, Jonin 1600+
+    outputs:
+      - discord-server-structure
+      - active-member-count
+      - moderation-log
+    current_owner: unassigned
+    automation_candidate: false
+    notes: >
+      Blocked on Discord server creation (gap: "Discord not shipped" in 04-gap-map/).
+      Discord server ID required before any surface wiring.
+      50 active members > 500 ghosts — curated growth is the operating principle.
+
+  - id: cta-stack-enforcer
+    mission: >
+      Audit every long-form video, Short, and pinned comment for the canonical CTA stack
+      (hokagechess.com/free-plan → Discord → subscribe); patch inconsistent surfaces across 322 videos
+    cadence: full audit once at Phase-1 start; weekly incremental audit for new uploads
+    inputs:
+      - youtube-channel-video-list  # 322 videos
+      - canonical-cta-text
+      - discord-invite-url  # NEEDS: Discord setup
+    outputs:
+      - cta-audit-report
+      - updated-descriptions-and-pinned-comments
+    current_owner: unassigned
+    automation_candidate: true
+    notes: >
+      High-cadence, mechanical role; second target for AI-assisted handoff after title-editor.
+      Blocked on Discord invite URL until server is created.
+      Full 322-video audit is a one-time Phase-1 sprint; budget ~2–3 days of focused work.

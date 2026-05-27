@@ -33,9 +33,12 @@ The stack splits cleanly between content surfaces (where Rob produces) and captu
 - `../../business/2026-04-25-hokage-4-level-funnel-architecture.md` — funnel layers each stack surface services
 - `../../../seed.yaml` — repo metadata declaring channel and brand bindings
 
-## TBD
+## TBD *(last swept 2026-06-01)*
 
 - Build `hokage-production-stack.md` mirroring `../../bodi/06-production-stack/bodi-production-stack.md` with detailed per-surface specs (Kit list ID, Discord server ID, YouTube playlist IDs)
+  - *Sweep note: blocked on operational data that does not yet exist — Kit account not created (list ID unknown), Discord server not shipped (server ID unknown), YouTube playlist IDs need Rob to share from YouTube Studio. The surface table above (§ Confirmed stack) is the skeleton; `hokage-production-stack.md` can be created once Kit list ID and Discord server ID are known. See `../04-gap-map/hokage-gap-map.md` for gap status.*
 - Add a `kpi-targets.yaml` setting numeric Phase-1 targets (Discord 50 active, daily Shorts 28-day count, lead-magnet conversion rate)
+  - *Sweep note: partial data available — Discord active-member target = 50; Shorts 28-day uptime target = 28/28 (100%); CTR red-line = <3% per video (already in `../05-agent-fleet/roles.yaml`). Still needed: lead-magnet opt-in rate target (needs Rob to set expectation), Kit list growth target (per week), "The Scroll" open-rate baseline. Can create skeleton once Rob confirms these numbers.*
 - Cross-link to BODI production stack where shared tooling appears (Canva, Google Drive); flag chess-only tools (Chess.com / Lichess game pull for lead-magnet positions)
+  - *Sweep note: shared tools are Canva (lead magnet design, Phase-1 PDF production) and Google Drive (interim PDF hosting before Gumroad free account is set up). Chess-only tools: Chess.com / Lichess game export API for mining Rob's last 30 games for "1300 Escape Plan" positions. Add explicit cross-link once `hokage-production-stack.md` is created.*
 

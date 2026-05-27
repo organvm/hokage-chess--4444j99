@@ -23,9 +23,12 @@ The structural diagnosis from `2026-04-25-cross-pollination-master-diagnosis.md`
 - `../../business/2026-04-25-cross-pollination-master-diagnosis.md` — the structural diagnosis driving the gap framing
 - `../../reviews/2026-04-30-eval-to-growth-master.md` §9.2 — repo-side gaps (substrate scope, manifest hygiene, test coverage) that gate downstream work
 
-## TBD
+## TBD *(last swept 2026-06-01)*
 
 - Build `hokage-gap-map.md` mirroring `../../bodi/04-gap-map/bodi-gap-map.md` with status fields (BLOCKED / IN-PROGRESS / SHIPPED) per gap
-- Add `heist-targets.yaml` for mechanisms to extract from chess-creator constellation (mirror BODI pattern)
+  - *Sweep note: **created** — `hokage-gap-map.md` skeleton (30-day TBD sweep 2026-06-01). All 7 active Phase-1 gaps have status fields. Gap-closure tracking table is ready to populate as Phase-1 progresses.*
+- Add `heist-targets.yaml` for mechanisms to extract from chess-creator constellation (mirror BODI pattern at `../../bodi/04-gap-map/heist-targets.yaml`)
+  - *Sweep note: deferred — heist targets require mechanism notes from the chess-creator constellation (03-constellation/), which is itself incomplete (0 actor cards, no mechanism research yet). Cannot create without fabricating. Prerequisite: `../03-constellation/chess-creators.yaml` with ≥3 entries.*
 - Track gap-closure rhythm against the 30-day plan once Week 1 ships
+  - *Sweep note: `hokage-gap-map.md` gap-closure tracking table is ready. Needs Phase-1 to begin populating. Reference cadence: `../../../ROB-FIRST-30-DAYS.md` Week 1–4 actions.*
 

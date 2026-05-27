@@ -20,9 +20,12 @@ The seed surfaces below are the structured intake points for Phase-1 community c
 - `../../bodi/08-external-contribution/README.md` — parent contribution surface (some patterns transfer, MLM-affiliate flows do not)
 - `../../../seed.yaml` — repo-level promotion-state declaration (`status: LOCAL`)
 
-## TBD
+## TBD *(last swept 2026-06-01)*
 
 - Build `contributor-surfaces.yaml` enumerating each surface with intake URL, contract notes, and the role responsible for triage (see `../05-agent-fleet/`)
+  - *Sweep note: blocked on operational data — Discord not shipped (no invite URL), viewer-submitted positions form not created (no Google Form URL), guest-stream scheduling not started. Surface names and contract notes are fully documented in this README; the YAML cannot be created without the live intake URLs. Prerequisite: Discord setup + Google Form creation. Revisit once "Discord not shipped" gap closes in `../04-gap-map/hokage-gap-map.md`.*
 - Draft a `guest-stream-brief-template.md` once first guest is scheduled — codify CTA stack and brand-voice constraints once rather than re-explaining each time
+  - *Sweep note: deferred — no guest streams scheduled as of this sweep. Template components are known (CTA stack: hokagechess.com/free-plan → Discord → subscribe; brand-voice constraint: authentic-climber framing, no clickbait, no MLM language). Draft once first guest conversation is in progress — pre-drafting before a concrete guest adds overhead with no benefit.*
 - When Discord co-mod onboarding starts, document the criteria used (active days, message quality, ELO band) so the promotion path is reproducible
+  - *Sweep note: deferred — Discord not yet shipped; 0 members. Promotion criteria (active days, message quality, ELO band per README) are clear conceptually. Formalize as a `co-mod-criteria.md` once "The Village" has ≥30 active members and co-mod candidacy is imminent.*
 

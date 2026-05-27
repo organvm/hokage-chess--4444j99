@@ -22,9 +22,12 @@ This layer elaborates on actors, ELO-banded tiers, content surfaces, and named f
 - `../../business/2026-04-25-hokage-4-level-funnel-architecture.md` — L1→L4 entities and the Naruto-stack pricing tiers
 - `../../business/2026-04-25-strategy-v6-master.md` — channel-health diagnosis, hook-first format, founder-asset position
 
-## TBD
+## TBD *(last swept 2026-06-01)*
 
 - Build an `entities.yaml` (or equivalent) enumerating actors / surfaces / formats with stable IDs, mirroring `../../bodi/01-ontology/` patterns
+  - *Sweep note: data is fully available in this README (creator, tiers, surfaces, formats). Blocked on: (1) format decision — table-style MD like `bodi-ontology.md` vs YAML with stable IDs; (2) Naruto trademark scope should be settled in `02-lineage/` first so tier-name disambiguation can be referenced here rather than duplicated.*
 - Disambiguate Naruto-stack tier names from Naruto trademark concerns (legal scope is in `02-lineage/`, not here)
+  - *Sweep note: current position (LOW risk for channel/community use; $500–$1,500 clearance needed for Phase-2 merch) is documented in `02-lineage/README.md`. No disambiguation needed until Rob approves Phase-2 budget. Cross-link: once `02-lineage/milestones.yaml` exists, add a pointer here.*
 - Add a relations sub-doc when more than two formats interact (e.g., "Jutsu of the Week" episode → "Sparring Partners" Discord channel → Kit broadcast follow-up)
+  - *Sweep note: deferred — premature until Jutsu-of-the-Week → Discord → Kit broadcast chain is operational. Revisit after Week 4 of Phase 1.*
 

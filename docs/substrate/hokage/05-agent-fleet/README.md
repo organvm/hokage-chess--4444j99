@@ -21,9 +21,12 @@ The roles below are seeded directly from the Week 1–4 actions in `ROB-FIRST-30
 - `../../business/2026-04-25-hokage-4-level-funnel-architecture.md` — funnel mechanisms each role services (L1→L2 capture, L3 retention, L4 multiplier)
 - `../../bodi/05-agent-fleet/README.md` — parent fleet (some roles transfer; network-marketing-specific roles do not)
 
-## TBD
+## TBD *(last swept 2026-06-01)*
 
 - Build `roles.yaml` enumerating each role with inputs, outputs, cadence, and current owner (Rob / Anthony / unassigned)
+  - *Sweep note: **created** — `roles.yaml` skeleton (30-day TBD sweep 2026-06-01). All 8 seed roles enumerated with inputs, outputs, cadence, and `current_owner`. All owners are `unassigned` except `bridge-content-producer` (Rob Bonavoglia). Needs Phase-1 role-assignment decisions and blocked-on fields updated when gaps close (Kit list ID, Discord server ID, Discord invite URL).*
 - Add automation candidates: Title Editor and CTA Stack Enforcer have low cognitive load and high cadence — first targets for AI-assisted operator handoff
+  - *Sweep note: annotated in `roles.yaml` — `title-editor`, `cta-stack-enforcer`, and `shorts-cutter` all have `automation_candidate: true`. Spec doc for each automation role deferred until role is first assigned to a human operator (requires baseline before automation).*
 - Track role-coverage status against the 30-day timeline; flag any role where Week-1 cadence has not started by Week 2
+  - *Sweep note: deferred — coverage table needs Phase-1 start date. Add a `coverage_log` section to `roles.yaml` once engagement officially begins and Week 1 cadence is running.*
 

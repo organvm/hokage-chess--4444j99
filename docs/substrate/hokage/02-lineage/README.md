@@ -31,9 +31,12 @@ The historic cut grounds Hokage in Rob's existing 322-video catalog and the NYC 
 - `../../business/2026-04-25-strategy-v6-master.md` — channel-health diagnosis and founder-asset framing
 - `../../../research/apex-predator-parent-architecture/` — December 2025 parent architecture (upstream lineage)
 
-## TBD
+## TBD *(last swept 2026-06-01)*
 
 - Add a dated milestone log (`milestones.yaml` or equivalent) for the futures cut as Phase 1 lands
+  - *Sweep note: milestone structure is clear (lead-magnet conversion, first 50 Discord members, first Bridge Content cycle, first paid tier ship). Blocked on actual Phase-1 start date and completion events — all four futures-cut milestones in § Futures above remain `OPEN`. Create skeleton once first gap closes (see `../04-gap-map/hokage-gap-map.md`).*
 - Cross-link to BODI lineage where Rob's BODI-side timeline drives Hokage decisions (e.g., when BODI bandwidth shifts allow more Hokage cadence)
+  - *Sweep note: specific data needed — Rob's current BODI weekly time commitment, and any known bandwidth-shift dates. This is a human-input item; tracked as V-D vacuum proxy in HANDOFF.md ([#50](https://github.com/4444J99/hokage-chess/issues/50)).*
 - Capture the trademark filing date when Phase 2 budget is approved
+  - *Sweep note: blocked on Rob's Phase-2 budget decision ($500–$1,500 clearance). USPTO filing window for HOKAGE CHESS in chess-product classes appears open (abandoned filings 90341734, 97007362). No action until budget approved.*
 

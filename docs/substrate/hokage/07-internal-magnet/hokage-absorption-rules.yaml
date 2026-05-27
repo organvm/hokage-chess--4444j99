@@ -1,0 +1,120 @@
+# Hokage Chess — absorption rules
+# Direction: BODI parent → Hokage chess-pillar (cross-pollination IN)
+# Decisions: ABSORB (inherited intact) | REFINE (adapted for chess domain) | REJECT (does not transfer)
+# Format mirrors: docs/substrate/bodi/07-internal-magnet/absorption-rules.yaml
+# Generated from: docs/substrate/hokage/07-internal-magnet/README.md
+# Last updated: 2026-06-01 (30-day TBD sweep)
+
+rules:
+  # ── ABSORB (inherited intact from BODI) ─────────────────────────────────────
+
+  - id: AR-001
+    source: L1-to-L4-funnel-mechanism
+    decision: ABSORB
+    from: docs/business/2026-04-25-bodi-funnel-with-premium-content-architecture.md
+    mirrored_at: docs/business/2026-04-25-hokage-4-level-funnel-architecture.md
+    reason: >
+      Cold-leads → opt-ins → customers → ambassadors cascade applies directly to chess.
+      Hokage has premium content depth BODI lacks; BODI has funnel discipline Hokage lacks.
+      The cross-pollination diagnosis makes this the primary structural transfer.
+
+  - id: AR-002
+    source: apex-predator-xp-character-sheet-quest-model
+    decision: ABSORB
+    from: research/apex-predator-parent-architecture/ (Dec 2025, first instantiation at a-organvm/gamified-coach-interface)
+    reason: >
+      XP / Character Sheet / quest-achievement model is inherited not invented.
+      Naruto-stack role names (Genin/Chunin/Jonin) provide the chess domain skin.
+      Do not reinvent primitives that exist in upstream lineage.
+
+  - id: AR-003
+    source: persona-narrative-section-primitive
+    decision: ABSORB
+    from: src/lib/landing-engine/ (shared with sister-stream per CLAUDE.md §Architecture shape-parity note)
+    reason: >
+      Brand-agnostic by design; chess vocabulary parameterized via ContentLexicon,
+      not baked into content-strategy.ts core. Keep the two implementations in shape-parity.
+
+  - id: AR-004
+    source: one-vocabulary-across-community-and-commerce
+    decision: ABSORB
+    from: BODI naming-convention discipline
+    reason: >
+      Genin/Chunin/Jonin serves dual purpose — Discord role tiers in Phase 1,
+      paid product tiers (Genin Squad $9/Chunin Dojo $29/Jonin Mentorship $99) in Phase 2.
+      Same vocabulary across surfaces reduces cognitive load for the audience.
+
+  - id: AR-005
+    source: content-strategy-heuristics (title-CTR-auditing, emotion-stakes-first formula)
+    decision: ABSORB
+    from: BODI reel-hook discipline
+    reason: >
+      Title auditing rhythm (<3% CTR = rewrite within 48h) and emotion/stakes-first
+      formula generalize across domains. Already implemented in src/lib/content-strategy.ts.
+
+  # ── REFINE (adapted for chess domain) ───────────────────────────────────────
+
+  - id: AR-006
+    source: hook-semantics
+    decision: REFINE
+    from: BODI transformation/aspiration hooks ("Transform your body in 30 days")
+    chess-adaptation: stakes/emotion within authentic-climb frame
+    example_in: '"I FINALLY Beat the Opening That Destroyed Me" — not "Become a chess god in 30 days"'
+    reason: >
+      Chess audience responds to authentic-climber narrative, not aspirational-coach narrative.
+      Rob's ~1350 ELO is an asset (relatable peer), not a credential to inflate.
+
+  - id: AR-007
+    source: authority-position
+    decision: REFINE
+    from: BODI fitness-coach authority (credentialed expert above the audience)
+    chess-adaptation: climber-among-climbers authority (peer learning alongside)
+    reason: >
+      Rob's ELO is the asset. Inflating credentials breaks the authentic-climb positioning.
+      The "Road to 1500" documentary framing requires maintained honest-climb authority.
+
+  - id: AR-008
+    source: content-cadence
+    decision: REFINE
+    from: BODI daily Instagram content cadence
+    chess-adaptation: daily Shorts (vertical puzzle) + weekly long-form Bridge Content
+    reason: >
+      Different platform mix (YouTube-first vs IG-first), same volume discipline.
+      YouTube's search-indexed content creates durable passive attraction vs IG's feed decay.
+
+  # ── REJECT (does not transfer from BODI) ────────────────────────────────────
+
+  - id: AR-009
+    source: network-marketing-distribution-layer
+    decision: REJECT
+    from: BODI MLM mechanics (Teamzy CRM, BODi affiliate program, downline ambassador recruiting)
+    reason: >
+      Chess audience does not respond to MLM cadence.
+      "Downline ambassador" framing would damage authentic-climber positioning irreversibly.
+      Hokage's L4 multiplier is community-built (Discord co-mods, guest streams),
+      not commission-structured.
+
+  - id: AR-010
+    source: wearable-data-bio-syncing
+    decision: REJECT
+    from: BODI Whoop/Oura biometric integration into L2 personalized plan
+    reason: >
+      No chess analog. Phase-1 Hokage does not consume biometric data.
+      May revisit if chess-performance + cognitive science angle develops in Phase 2+.
+
+  - id: AR-011
+    source: fitness-influencer-constellation
+    decision: REJECT
+    from: BODI 75-person constellation fitness/coaching/network-marketing domains
+    reason: >
+      Out of scope for Hokage. Chess-creator filtration handled in
+      docs/substrate/hokage/03-constellation/README.md.
+      BODI constellation data lives at docs/substrate/bodi/03-constellation/.
+
+  - id: AR-012
+    source: beachbody-bodi-corporate-scaffolding
+    decision: REJECT
+    from: BODI parent-corporate platform (BODi affiliate program, Beachbody products)
+    reason: >
+      Hokage does not have a parent corporate platform to leverage.
+      All channels are owned-media. Product economics are creator-direct.

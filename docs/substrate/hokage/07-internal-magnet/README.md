@@ -32,9 +32,12 @@ Without this stratum the substrate looks like duplicated BODI. The magnet rule i
 - `../../../research/apex-predator-parent-architecture/` — Dec-2025 architecture that both BODI and Hokage instantiate
 - `../../../CLAUDE.md` "Architecture" section — describes the brand-agnostic primitive boundary in `content-strategy.ts` and `landing-engine/`
 
-## TBD
+## TBD *(last swept 2026-06-01)*
 
 - Build `hokage-absorption-rules.yaml` (mirror of `../../bodi/07-internal-magnet/absorption-rules.yaml`) with explicit IN/REFINE/REJECT entries and rationale
+  - *Sweep note: **created** — `hokage-absorption-rules.yaml` (30-day TBD sweep 2026-06-01). 12 rules: ABSORB × 5, REFINE × 3, REJECT × 4. Seeded from the three sections of this README (Absorbed / Refined / Rejected). Review for completeness when new BODI primitives are proposed for Hokage adoption.*
 - Add a `cross-pollination.md` companion documenting the flow direction per primitive
+  - *Sweep note: flow direction is currently one-way (BODI → Hokage only). Specific data needed to create `cross-pollination.md`: (1) whether any Hokage primitives flow back to BODI (e.g., does chess-pedagogy scaffold discipline transfer?); (2) whether the sister-stream landing engine (see CLAUDE.md §Architecture, "Cross-stream context") receives any Hokage primitives. Cannot write confidently without Anthony's architectural decision on bidirectionality.*
 - Track refusal events: when a BODI tactic is proposed for Hokage and rejected, log it here with the rejection reason
+  - *Sweep note: deferred — AR-009 through AR-012 in `hokage-absorption-rules.yaml` document the four founding rejections. Add a `refusal_log` section to the YAML when new rejection events occur in future sessions.*
 
