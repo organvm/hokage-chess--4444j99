@@ -91,7 +91,7 @@
 | MP-4 | Avatar archetype canonical doc (Hokage underdog + dual-discipline persona) | Implied across docs, never formally specified |
 | MP-5 | BODI exit transition messaging plan (how Rob announces without burning bridges) | Reformation spec says exit; doesn't say HOW to communicate it |
 | MP-6 | Legion of Fitness FB group migration plan (rebrand? wind down? Hokage Legion?) | Asset exists; future is undecided |
-| MP-7 | Email list architecture decision (single unified newsletter or two pillar-separate) | RESOLVED 2026-06-21: one subscriber database, two primary tracks, bridge segment. See `2026-06-21-email-list-architecture-decision.md` |
+| MP-7 | Email list architecture decision (single unified newsletter or two pillar-separate) | Both world maps recommend Beehiiv; no single canonical answer |
 | MP-8 | Wearable integration content plan (Whoop or Oura, when, what content angle) | FWS-6 is the affiliate; this is the content/programming layer |
 | MP-9 | Cohort challenge ritual design (quarterly Legion challenges, paid entry tier) | Implied in fitness world map §7.8; needs spec |
 | MP-10 | Rob's actual time budget (hours/week, current allocation, target re-allocation post-reformation) | Unknown — affects every roadmap |
@@ -133,7 +133,7 @@ MP-10 (time budget)    ─→ everything else's feasibility
 1. **AF-5** (parity break, 1min)
 2. **AF-1, AF-2, AF-4** (cosmetic cleanup, 5min)
 3. **MP-1, MP-4** (pillar taxonomy + avatar archetype — design docs, 1-2hr each)
-4. **MP-7** (DONE 2026-06-21 — email architecture decision doc now informs Kit/Beehiiv/Teamzy setup)
+4. **MP-7** (email architecture decision doc — informs Beehiiv setup)
 5. **BR-2** (discipline-transfers essay — Rob's positioning thesis)
 6. **AF-3** (deepen timeslices, 1-2hr)
 7. **MP-2, MP-5, MP-6, MP-9, MP-10** (remaining design docs)
