@@ -191,7 +191,6 @@ This funnel architecture explicitly depends on or feeds into:
 ### Blocked on user
 - **PRT-030 Kit API key** — 60s action, blocks all of L2.
 - **CRM unification decision** — Kit vs Teamzy as single source of truth across BODI + Hokage.
-- **Email list architecture is resolved by MP-7** — one subscriber database, two primary tracks (`pillar:chess`, `pillar:fitness`), bridge as `pillar:bridge` segment. Vendor choice must preserve those tags.
 - **hokagechess.com domain registration** — blocks public deploy, blocks `/free-plan` URL share-ability.
 
 ### Blocked on Rob
@@ -220,7 +219,6 @@ Plus lineage:
 - `2026-04-25-business-plan-v2.md` — Genin/Chunin/Jonin commerce model — DO NOT redefine
 - `2026-04-25-pitch-deck-v3.md` — narrative framing
 - `2026-04-25-apex-predator-lineage-appendix.md` — parent architecture (Tier 1-4 mapping)
-- `2026-06-21-email-list-architecture-decision.md` — MP-7 decision: one contact ledger, two primary editorial tracks, bridge segment
 - `docs/ROB-FIRST-30-DAYS.md` — execution playbook (existing, reference for ambassador toolkit)
 - `seed.yaml` — repo edge declarations
 
@@ -237,4 +235,4 @@ This architecture ships as v1 when:
 6. ⏳ First lead captured via Kit
 7. ⏳ First Genin Squad conversion
 
-v2 trigger: any of (a) Kit replaced by Teamzy, Beehiiv, or another CRM/newsletter platform while preserving MP-7 tags, (b) Genin/Chunin/Jonin pricing adjusted, (c) ambassador rev-share model formalized differently than 30%.
+v2 trigger: any of (a) Kit replaced by Teamzy or another CRM, (b) Genin/Chunin/Jonin pricing adjusted, (c) ambassador rev-share model formalized differently than 30%.

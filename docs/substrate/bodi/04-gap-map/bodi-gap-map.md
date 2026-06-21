@@ -1,7 +1,7 @@
 # BODI Gap Map
 
 **Status:** REGENERATED (Research-Backed)
-**Last Updated:** 2026-06-21
+**Last Updated:** 2026-04-25
 
 ## Identified Gaps
 
@@ -22,7 +22,7 @@ BODI is operationally functional but **manually bottlenecked.** The shift from "
 ## Order of Attack (Revised)
 
 1. **L0 Inventory:** Catalog every existing reel/short to create the first "Passive Attraction" library.
-2. **Owned Land:** Setup the fitness track inside the MP-7 shared subscriber base; evaluate Beehiiv/Substack only as the publishing layer if needed.
+2. **Owned Land:** Setup a simple "Owned Media" surface (e.g., Substack or Beehiiv) to capture L2 emails permanently.
 3. **Warm Routing:** Implement a rule in Teamzy to prioritize engagers over scraped leads.
 4. **Data Augmentation:** Update the L2 "Personalized Plan" to include bio-syncing options (wearables).
 5. **AI Screener:** Test a low-cost AI agent for L1 comment/DM triage.
