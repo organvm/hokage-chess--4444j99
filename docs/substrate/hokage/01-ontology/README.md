@@ -11,7 +11,7 @@ This layer elaborates on actors, ELO-banded tiers, content surfaces, and named f
   - **Genin** (0–1199 ELO) — newcomers, largest tier, future $9/mo Genin Squad
   - **Chunin** (1200–1599 ELO) — current core, Rob's tribe, future $29/mo Chunin Dojo
   - **Jonin** (1600+ ELO) — peers and mentors, future $99/mo Jonin Mentorship
-- **Content surfaces:** YouTube long-form, YouTube Shorts (daily puzzle), Discord ("The Village"), Kit newsletter/chess track ("The Scroll"), `hokagechess.com` landing
+- **Content surfaces:** YouTube long-form, YouTube Shorts (daily puzzle), Discord ("The Village"), Kit newsletter ("The Scroll"), `hokagechess.com` landing
 - **Named formats:** Jutsu of the Week (Tuesday cadence, single-technique), Boss Battle (monthly, opponent-encounter; Park / Online / Title / Echo variants)
 - **Lead-magnet asset:** "The 1300 Escape Plan" — 7-position breakdown of typical 1300-instinct mistakes
 - **Flagship series:** Road to 1500 (long-running climb documentary)
@@ -20,7 +20,6 @@ This layer elaborates on actors, ELO-banded tiers, content surfaces, and named f
 
 - `../../../ROB-FIRST-30-DAYS.md` — Genin/Chunin/Jonin tier definitions, named formats, Discord / Kit / lead-magnet entities
 - `../../business/2026-04-25-hokage-4-level-funnel-architecture.md` — L1→L4 entities and the Naruto-stack pricing tiers
-- `../../business/2026-06-21-email-list-architecture-decision.md` — MP-7 list architecture: shared base, two primary tracks, bridge segment
 - `../../business/2026-04-25-strategy-v6-master.md` — channel-health diagnosis, hook-first format, founder-asset position
 
 ## TBD *(last swept 2026-06-01)*
@@ -31,3 +30,4 @@ This layer elaborates on actors, ELO-banded tiers, content surfaces, and named f
   - *Sweep note: current position (LOW risk for channel/community use; $500–$1,500 clearance needed for Phase-2 merch) is documented in `02-lineage/README.md`. No disambiguation needed until Rob approves Phase-2 budget. Cross-link: once `02-lineage/milestones.yaml` exists, add a pointer here.*
 - Add a relations sub-doc when more than two formats interact (e.g., "Jutsu of the Week" episode → "Sparring Partners" Discord channel → Kit broadcast follow-up)
   - *Sweep note: deferred — premature until Jutsu-of-the-Week → Discord → Kit broadcast chain is operational. Revisit after Week 4 of Phase 1.*
+

@@ -63,24 +63,20 @@ roles:
     mission: >
       Configure Kit (ConvertKit) free tier; draft 3-email welcome sequence
       (who-I-am / embarrassing-loss / Village invite);
-      ship once lead magnet is live; maintain the chess track inside the MP-7
-      shared subscriber base
+      ship once lead magnet is live; maintain "The Scroll" list
     cadence: setup one-time; weekly broadcast once list >100 subscribers
     inputs:
       - kit-account-credentials  # NEEDS: Rob to create Kit free account
       - lead-magnet-hosting-url
     outputs:
       - kit-welcome-sequence  # 3 emails
-      - shared-subscriber-base-id   # NEEDS: populate once account exists
-      - pillar-chess-tag-id  # NEEDS: maps to MP-7 `pillar:chess`
-      - pillar-bridge-tag-id  # NEEDS: maps to MP-7 `pillar:bridge`
+      - the-scroll-list-id   # NEEDS: populate once account exists
       - weekly-broadcast-drafts
     current_owner: unassigned
     automation_candidate: false
     notes: >
       Blocked on Kit account setup (V7 vacuum in HANDOFF.md).
-      Subscriber base/list ID required to wire the subscribe form in src/app/api/subscribe/route.ts.
-      MP-7 resolved list architecture as one base, two tracks, bridge segment.
+      Kit list ID required to wire the subscribe form in src/app/api/subscribe/route.ts.
 
   - id: shorts-cutter
     mission: >
