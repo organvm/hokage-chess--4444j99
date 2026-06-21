@@ -117,6 +117,14 @@ These already exist; the substrate composes them rather than reinventing.
 - Hokage-chess repo-lock rule (`CLAUDE.md`) — already enforces filesystem boundary; this substrate adds the *content* boundary on top.
 - Maddie repo's `client IP boundary enforced (content = client's, code = studio's)` (sovereign-systems `seed.yaml` pragma) — generalized in the studio-code clause above.
 
+## Off-repo Durability
+
+To ensure that off-repo artifacts (like triaged transcripts in `~/.local/share/<stream>/operational/exports/`) survive machine loss, these paths are mirrored to a secure remote via `chezmoi`.
+
+- The paths `~/.local/share/hokage-chess/operational/` and `~/.local/share/sovereign-systems/operational/` are chezmoi-managed.
+- Auto-commit and auto-push are enabled (`git.autoCommit = true`, `git.autoPush = true` in `chezmoi.toml`) to ensure parity is maintained automatically.
+- Since transcripts may contain client-sensitive content, the chezmoi remote MUST be encrypted at rest (chezmoi private repos meet this requirement).
+
 ## Audit Log
 
 | Date | Event | Action | Reference |
