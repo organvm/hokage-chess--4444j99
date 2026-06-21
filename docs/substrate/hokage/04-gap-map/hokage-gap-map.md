@@ -9,7 +9,7 @@
 | Gap | Category | Status | Blocking condition |
 | :--- | :--- | :--- | :--- |
 | **Lead magnet not built** | Acquisition | `OPEN` | "The 1300 Escape Plan" (7-position PDF, 15–20 pages, Canva) is Phase-1's critical non-video deliverable; no email anchor without it |
-| **Email capture not wired** | Acquisition | `OPEN` | Kit (ConvertKit) "The Scroll" not configured; ~99 existing subscribers have no welcome sequence |
+| **Email capture not wired** | Acquisition | `OPEN` | Kit (ConvertKit) Hokage chess track not configured inside MP-7 shared subscriber base; ~99 existing subscribers have no welcome sequence |
 | **Discord not shipped** | Community | `OPEN` | "The Village" with Genin/Chunin/Jonin role tiers and 3 seed channels unbuilt; community retention layer absent |
 | **CTA stack inconsistent** | Retention | `OPEN` | 322 existing videos do not consistently route to canonical CTA (hokagechess.com/free-plan → Discord → subscribe) |
 | **Title strategy under-leveraged** | Acquisition | `OPEN` | Top 20 videos lead with "Episode X" not emotion/stakes hook; CTR bleeds at unknown rate; no A/B testing rhythm |

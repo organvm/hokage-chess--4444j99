@@ -7,7 +7,7 @@ The structural diagnosis from `2026-04-25-cross-pollination-master-diagnosis.md`
 ## Seed gaps (engagement-start)
 
 - **Lead magnet not built.** "The 1300 Escape Plan" (7-position breakdown, 15–20 page Canva PDF) is the single most important non-video deliverable for Phase 1 and does not exist
-- **Email capture not wired.** Kit (ConvertKit) free-tier list "The Scroll" not configured; 99 existing subscribers have no welcome sequence
+- **Email capture not wired.** Kit (ConvertKit) free-tier Hokage chess track not configured inside the MP-7 shared subscriber base; 99 existing subscribers have no welcome sequence
 - **Discord not shipped.** "The Village" with three rating-banded role tiers (Genin / Chunin / Jonin) and three seed channels (`#jutsu-of-the-week`, `#sparring-partners`, `#study-hall`) is unbuilt
 - **CTA stack inconsistent.** 322 existing videos do not consistently point to a single canonical CTA (`hokagechess.com/free-plan` → Discord → subscribe)
 - **Title strategy under-leveraged.** Top 20 videos lead with "Episode X" rather than emotion/stakes; CTR bleeds; no A/B testing rhythm
@@ -21,6 +21,7 @@ The structural diagnosis from `2026-04-25-cross-pollination-master-diagnosis.md`
 - `../../../ROB-FIRST-30-DAYS.md` — engagement plan that enumerates each gap as a Week 1–4 action
 - `../../business/2026-04-25-hokage-4-level-funnel-architecture.md` — L1→L4 mirror; the gaps map to L1→L2 capture and L3→L4 multiplier mechanisms
 - `../../business/2026-04-25-cross-pollination-master-diagnosis.md` — the structural diagnosis driving the gap framing
+- `../../business/2026-06-21-email-list-architecture-decision.md` — MP-7 shared-base/two-track email model
 - `../../reviews/2026-04-30-eval-to-growth-master.md` §9.2 — repo-side gaps (substrate scope, manifest hygiene, test coverage) that gate downstream work
 
 ## TBD *(last swept 2026-06-01)*
@@ -31,4 +32,3 @@ The structural diagnosis from `2026-04-25-cross-pollination-master-diagnosis.md`
   - *Sweep note: deferred — heist targets require mechanism notes from the chess-creator constellation (03-constellation/), which is itself incomplete (0 actor cards, no mechanism research yet). Cannot create without fabricating. Prerequisite: `../03-constellation/chess-creators.yaml` with ≥3 entries.*
 - Track gap-closure rhythm against the 30-day plan once Week 1 ships
   - *Sweep note: `hokage-gap-map.md` gap-closure tracking table is ready. Needs Phase-1 to begin populating. Reference cadence: `../../../ROB-FIRST-30-DAYS.md` Week 1–4 actions.*
-

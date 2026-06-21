@@ -133,7 +133,7 @@ Drafts for these three emails are NOT in scope for Stream D — they're a Phase-
 
 ## CRM unification decision (PRT-047, parking lot)
 
-Per memory `project_artifact_rob_trail_2026_04_27.md` L13: there is an open user-side decision on **Kit standalone vs Teamzy unified across BODI + Hokage**. This runbook treats Kit as standalone for Hokage. If the decision lands on Teamzy unified, the API route at `src/app/api/subscribe/route.ts` becomes the single integration point — swap the Kit endpoint for Teamzy's, keep everything else the same. The wiring is decision-neutral.
+MP-7 is now resolved in `2026-06-21-email-list-architecture-decision.md`: one subscriber database, two primary tracks, bridge as a segment. That does not fully settle the vendor question. Per memory `project_artifact_rob_trail_2026_04_27.md` L13, there is still an open user-side decision on **Kit standalone vs Teamzy unified across BODI + Hokage**. This runbook treats Kit as the v1 Hokage implementation. If the decision lands on Teamzy unified or Beehiiv later, the API route at `src/app/api/subscribe/route.ts` remains the integration point. Swap the backend, but preserve MP-7 tags: `pillar:chess`, `pillar:fitness`, `pillar:bridge`, source, and stage.
 
 ---
 
@@ -151,6 +151,7 @@ Per memory `project_artifact_rob_trail_2026_04_27.md` L13: there is an open user
 
 - API route: `src/app/api/subscribe/route.ts` (commit `c253df8`)
 - Form handler: `src/app/page.tsx` `FinalCTASection` (same commit)
+- MP-7 decision: `docs/business/2026-06-21-email-list-architecture-decision.md`
 - Vercel preflight: `docs/business/2026-04-29-vercel-deploy-preflight.md`
 - IRF candidate: `IRF-PRT-V7`
 - GH issue: opened in Phase 4.2

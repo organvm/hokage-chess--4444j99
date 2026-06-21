@@ -8,7 +8,7 @@ targets:
     name: Owned Media Setup
     priority: 1
     file: docs/substrate/bodi/06-production-stack/owned-media-plan.md
-    outcome: Beehiiv/Substack configured for permanent lead capture.
+    outcome: Fitness track configured inside the MP-7 shared subscriber base; Beehiiv/Substack evaluated only as a publishing layer.
   - id: T-003
     name: Bio-Syncing Offer
     priority: 2
