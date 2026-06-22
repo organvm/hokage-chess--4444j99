@@ -53,7 +53,7 @@
 
 | ID | Atom | Source | Priority |
 |---|---|---|---|
-| CWS-1 | Twitch live streaming setup (Hokage-themed live training arcs) | chess world map §7.1 in issue text / §8.1 in current file; setup runbook `docs/business/2026-06-22-cws-1-twitch-live-training-arc-setup.md` | P1 |
+| CWS-1 | Twitch live streaming setup (Hokage-themed live training arcs) | chess world map §7.1 | P1 |
 | CWS-2 | Discord community (free tier + paid Hidden Leaf Village structure) | chess world map §7.2 | P1 |
 | CWS-3 | Beehiiv newsletter "Hokage Scroll" weekly | chess world map §7.3 | P1 |
 | CWS-4 | YouTube Shorts decoupled-feed strategy (tactic-of-the-day) | chess world map §7.4 | P2 |
@@ -70,7 +70,7 @@
 | FWS-3 | Owned digital product — first non-BODI asset (PDF/cohort) | fitness world map §7.3 | P1 |
 | FWS-4 | Long-form authority surface (YouTube long-form OR podcast) | fitness world map §7.4 | P2 |
 | FWS-5 | Coaching software backend (TrueCoach $26/mo for 5 clients) | fitness world map §7.5 | P2 |
-| FWS-6 | Wearable affiliate stack (Whoop/Oura/Element/AG1) | fitness world map §7.10 | P2 |
+| FWS-6 | Wearable affiliate stack (Whoop/Oura/Element/AG1) → Form 11 | fitness world map §7.10 | P2 |
 | FWS-7 | Owned domain at fitness identity (e.g. robbonavoglia.com) | fitness world map §7.7 | P2 |
 
 ## E. Bridge Pillar (genuinely unoccupied space) — `bridge-content`
