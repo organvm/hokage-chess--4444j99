@@ -71,7 +71,7 @@
 | FWS-4 | Long-form authority surface (YouTube long-form OR podcast) | fitness world map §7.4 | P2 |
 | FWS-5 | Coaching software backend (TrueCoach $26/mo for 5 clients) | fitness world map §7.5 | P2 |
 | FWS-6 | Wearable affiliate stack (Whoop/Oura/Element/AG1) → Form 11 | fitness world map §7.10 | P2 |
-| FWS-7 | Owned domain at fitness identity (e.g. robbonavoglia.com) | fitness world map §7.7 | P2 |
+| FWS-7 | Owned domain at fitness identity (`robbonavoglia.com`) [docs/business/2026-06-21-fws-7-owned-domain.md] | fitness world map §7.7 | DONE |
 
 ## E. Bridge Pillar (genuinely unoccupied space) — `bridge-content`
 
@@ -187,7 +187,7 @@ All 43 atoms now tracked as issues in `4444J99/hokage-chess`:
 | FWS-4 | #27 | whitespace-fitness, P2 |
 | FWS-5 | #28 | whitespace-fitness, P2 |
 | FWS-6 | #29 | whitespace-fitness, P2 |
-| FWS-7 | #30 | whitespace-fitness, P2 |
+| FWS-7 | #30 | DONE |
 | BR-1 | #31 | bridge-content, P0 |
 | BR-2 | #32 | bridge-content, P1 |
 | BR-3 | #33 | bridge-content, P2 |

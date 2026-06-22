@@ -264,7 +264,7 @@ Ranked by leverage (highest first), with explicit reference to which operator ty
 ### 7.7 — Owned URL / personal domain at the fitness identity
 **Who has this:** every operator above hobby tier
 **What it unlocks:** SEO authority, link-in-bio destination he controls, page he can iterate independent of IG's algorithm
-**For Rob:** robbonavoglia.com (or similar) — currently no fitness-side domain, only hokagechess.com on the chess side.
+**For Rob:** `robbonavoglia.com` (chosen via FWS-7) — currently no fitness-side domain, only hokagechess.com on the chess side.
 
 ### 7.8 — Cohort challenge ritual
 **Who has this:** Beachbody itself ran on this for two decades; every Skool fitness operator runs quarterly

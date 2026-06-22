@@ -1,12 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
-
-import {
-  FIRST_BRIDGE_PIECE,
-  IDENTITY_FUSION_PILLAR,
-} from "@/lib/bridge-content";
 
 /* ─── SVG Icons (inline to avoid dependencies) ─── */
 
@@ -39,14 +33,6 @@ function Flame({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
       <path d="M12 23c-3.87 0-7-3.13-7-7 0-2.38 1.19-4.47 3-5.74V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v6.26c1.81 1.27 3 3.36 3 5.74 0 3.87-3.13 7-7 7zm-1-9.87c-1.83.97-3 2.88-3 5.04C8 20.31 9.69 22 12 22s4-1.69 4-3.83c0-2.16-1.17-4.07-3-5.04V4h-2v9.13z" />
-    </svg>
-  );
-}
-
-function Barbell({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M2 9h3v6H2V9Zm4-2h3v10H6V7Zm4 4h4v2h-4v-2Zm5-4h3v10h-3V7Zm4 2h3v6h-3V9Z" />
     </svg>
   );
 }
@@ -278,69 +264,6 @@ function IdentitySection() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function BridgePillarSection() {
-  const railIcons = [
-    <ChessKnight key="board" className="h-7 w-7" />,
-    <Barbell key="iron" className="h-7 w-7" />,
-    <Flame key="home" className="h-7 w-7" />,
-  ];
-
-  return (
-    <section className="relative bg-black px-6 py-24 sm:py-32">
-      <div className="mx-auto max-w-5xl">
-        <div className="grid gap-12 md:grid-cols-[1.15fr_0.85fr] md:items-end">
-          <div>
-            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.25em] text-hokage-red">
-              {IDENTITY_FUSION_PILLAR.atom} - {IDENTITY_FUSION_PILLAR.label}
-            </p>
-            <h2 className="font-heading text-3xl font-bold uppercase leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
-              {IDENTITY_FUSION_PILLAR.headline}
-            </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-hokage-light/70">
-              {IDENTITY_FUSION_PILLAR.subhead}
-            </p>
-          </div>
-
-          <div className="border-l border-hokage-red/35 pl-6">
-            <p className="font-heading text-2xl font-bold uppercase leading-tight text-white">
-              First bridge piece is live.
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-hokage-light/60">
-              {FIRST_BRIDGE_PIECE.title}: {FIRST_BRIDGE_PIECE.dek}
-            </p>
-            <Link
-              href={`/bridge/${FIRST_BRIDGE_PIECE.slug}`}
-              className="mt-6 inline-flex items-center rounded-sm bg-hokage-red px-6 py-3 font-heading text-sm uppercase tracking-wider text-white cta-glow"
-            >
-              Read the bridge
-            </Link>
-          </div>
-        </div>
-
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {IDENTITY_FUSION_PILLAR.rails.map((rail, i) => (
-            <div
-              key={rail.label}
-              className="rounded-sm border border-hokage-light/10 bg-hokage-gray/35 p-6"
-            >
-              <div className="mb-5 text-hokage-red">{railIcons[i]}</div>
-              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-hokage-red/80">
-                {rail.label}
-              </p>
-              <h3 className="mt-3 font-heading text-xl font-bold uppercase text-white">
-                {rail.discipline}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-hokage-light/60">
-                {rail.promise}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
@@ -851,7 +774,6 @@ export default function Home() {
       <HeroSection />
       <ProblemSection />
       <IdentitySection />
-      <BridgePillarSection />
       <ThreeRoadsSection />
       <SocialProofSection />
       <OfferSection />
