@@ -69,7 +69,7 @@
 | FWS-2 | Skool/Whop paid community gate (Legion of Fitness migration) | fitness world map §7.2 | P1 |
 | FWS-3 | Owned digital product (Legion Bulk Protocol) [docs/business/2026-06-21-fws-3-owned-digital-product.md] | fitness world map §7.3 | DONE |
 | FWS-4 | Long-form authority surface (YouTube long-form OR podcast) | fitness world map §7.4 | P2 |
-| FWS-5 | Coaching software backend (TrueCoach $26/mo for 5 clients) | fitness world map §7.5 | P2 |
+| FWS-5 | Coaching software backend (TrueCoach $26/mo for 5 clients) [docs/business/2026-06-22-fws-5-coaching-software-backend.md] | fitness world map §7.5 | DONE |
 | FWS-6 | Wearable affiliate stack (Whoop/Oura/Element/AG1) → Form 11 | fitness world map §7.10 | P2 |
 | FWS-7 | Owned domain at fitness identity (`robbonavoglia.com`) [docs/business/2026-06-21-fws-7-owned-domain.md] | fitness world map §7.7 | DONE |
 
@@ -185,7 +185,7 @@ All 43 atoms now tracked as issues in `4444J99/hokage-chess`:
 | FWS-2 | #25 | whitespace-fitness, P1 |
 | FWS-3 | #26 | DONE |
 | FWS-4 | #27 | whitespace-fitness, P2 |
-| FWS-5 | #28 | whitespace-fitness, P2 |
+| FWS-5 | #28 | DONE |
 | FWS-6 | #29 | whitespace-fitness, P2 |
 | FWS-7 | #30 | DONE |
 | BR-1 | #31 | bridge-content, P0 |
