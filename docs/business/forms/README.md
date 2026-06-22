@@ -21,6 +21,7 @@
 | 08 | [Jutsu Ep 1 recording prep](08-jutsu-ep1-recording-checklist.md) | Rob | ~3 hr (production) | First instance of recurring named-format pillar |
 | 09 | [Domain lexicon extension](09-domain-lexicon-extension.md) | Anthony or any operator | 10-20 min | Scoring engine specialized to a new domain without forking |
 | 10 | [Magnetism measurement card](10-magnetism-measurement-card.md) | Anthony (weekly) | 10 min | Rhetorical magnetism formula → measured signal |
+| 11 | [Wearable affiliate selection](11-wearable-affiliate-selection.md) | Rob | 10 min | Wearable affiliate integration across content stack |
 
 ---
 

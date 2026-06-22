@@ -281,8 +281,6 @@ export function planWeek(
   ideas: VideoIdea[],
   _week_start: Date
 ): { long_form: VideoIdea[]; shorts: VideoIdea[] } {
-  void _week_start;
-
   const scored = ideas
     .map((idea) => ({ idea, ...evaluateIdea(idea) }))
     .filter((e) => e.verdict !== "skip")

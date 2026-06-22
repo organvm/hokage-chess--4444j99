@@ -53,9 +53,9 @@
 
 | ID | Atom | Source | Priority |
 |---|---|---|---|
-| CWS-1 | Twitch live streaming setup (Hokage-themed live training arcs) | chess world map §7.1 in issue text / §8.1 in current file; setup runbook `docs/business/2026-06-22-cws-1-twitch-live-training-arc-setup.md` | P1 |
+| CWS-1 | Twitch live streaming setup (Hokage-themed live training arcs) | chess world map §7.1 | P1 |
 | CWS-2 | Discord community (free tier + paid Hidden Leaf Village structure) | chess world map §7.2 | P1 |
-| CWS-3 | Beehiiv newsletter "Hokage Scroll" weekly | chess world map §7.3 | P1 |
+| CWS-3 | Unified database newsletter: "Hokage Scroll" chess track | chess world map §8.1.3 | P1 |
 | CWS-4 | YouTube Shorts decoupled-feed strategy (tactic-of-the-day) | chess world map §7.4 | P2 |
 | CWS-5 | Pitch Perpetual Chess Adult Improver Series appearance | chess world map §7.5 | P2 |
 | CWS-6 | Pitch Chess.com Creator of the Month | chess world map §8 | P2 |
@@ -65,12 +65,12 @@
 
 | ID | Atom | Source | Priority |
 |---|---|---|---|
-| FWS-1 | Beehiiv newsletter (fitness-side or unified discipline newsletter) | fitness world map §7.1 | P1 |
+| FWS-1 | Unified database newsletter: "Legion Dispatch" fitness track | fitness world map §7.1 | P1 |
 | FWS-2 | Skool/Whop paid community gate (Legion of Fitness migration) | fitness world map §7.2 | P1 |
 | FWS-3 | Owned digital product — first non-BODI asset (PDF/cohort) | fitness world map §7.3 | P1 |
 | FWS-4 | Long-form authority surface (YouTube long-form OR podcast) | fitness world map §7.4 | P2 |
 | FWS-5 | Coaching software backend (TrueCoach $26/mo for 5 clients) | fitness world map §7.5 | P2 |
-| FWS-6 | Wearable affiliate stack (Whoop/Oura/Element/AG1) | fitness world map §7.10 | P2 |
+| FWS-6 | Wearable affiliate stack (Whoop/Oura/Element/AG1) → Form 11 | fitness world map §7.10 | P2 |
 | FWS-7 | Owned domain at fitness identity (e.g. robbonavoglia.com) | fitness world map §7.7 | P2 |
 
 ## E. Bridge Pillar (genuinely unoccupied space) — `bridge-content`
@@ -91,7 +91,7 @@
 | MP-4 | Avatar archetype canonical doc (Hokage underdog + dual-discipline persona) | Implied across docs, never formally specified |
 | MP-5 | BODI exit transition messaging plan (how Rob announces without burning bridges) | Reformation spec says exit; doesn't say HOW to communicate it |
 | MP-6 | Legion of Fitness FB group migration plan (rebrand? wind down? Hokage Legion?) | Asset exists; future is undecided |
-| MP-7 | Email list architecture decision (single unified newsletter or two pillar-separate) | Both world maps recommend Beehiiv; no single canonical answer |
+| MP-7 | Email list architecture decision [DONE] | Resolved via unified base, two tracks |
 | MP-8 | Wearable integration content plan (Whoop or Oura, when, what content angle) | FWS-6 is the affiliate; this is the content/programming layer |
 | MP-9 | Cohort challenge ritual design (quarterly Legion challenges, paid entry tier) | Implied in fitness world map §7.8; needs spec |
 | MP-10 | Rob's actual time budget (hours/week, current allocation, target re-allocation post-reformation) | Unknown — affects every roadmap |

@@ -230,10 +230,11 @@ This is exactly the diagnosis from `2026-04-25-cross-pollination-master-diagnosi
 
 Ranked by leverage (highest first), with explicit reference to which operator type already occupies the slot:
 
-### 7.1 — Owned email list / newsletter
+### 7.1 — Owned email list / newsletter (FWS-1)
+*Update (2026-06-21 per MP-7):* The newsletter operates on a **single unified database** alongside the chess pillar. The "Legion Dispatch" is not a standalone database, but the **fitness track** (segment/tag) within the master list.
 **Who has this:** Arnold ("Pump Club" — 1M+), Attia, Huberman, RP, every mid-tier coach above ~25K IG followers
 **What it unlocks:** platform-independent audience asset; Beehiiv ad network revenue ($1M+/mo paid out across platform); Beehiiv creators with diversified revenue earn ~3× single-stream
-**For Rob:** zero infrastructure; Beehiiv free tier viable; could mine Legion of Fitness FB group + IG followers as the seed list. **Highest leverage, lowest cost.**
+**For Rob:** zero infrastructure; Beehiiv free tier viable (though Kit is used for early capture); could mine Legion of Fitness FB group + IG followers as the seed list. **Highest leverage, lowest cost.**
 
 ### 7.2 — Paid community gate (Skool / Whop / Patreon-Discord)
 **Who has this:** Elliott Hulse (Skool ~2.4K members), thousands of mid-tier coaches, every operator running cohort challenges
