@@ -70,7 +70,7 @@
 | FWS-3 | Owned digital product (Legion Bulk Protocol) [docs/business/2026-06-21-fws-3-owned-digital-product.md] | fitness world map §7.3 | DONE |
 | FWS-4 | Long-form authority surface (YouTube long-form OR podcast) | fitness world map §7.4 | P2 |
 | FWS-5 | Coaching software backend (TrueCoach $26/mo for 5 clients) | fitness world map §7.5 | P2 |
-| FWS-6 | Wearable affiliate stack (Whoop/Oura/Element/AG1) → Form 11 | fitness world map §7.10 | P2 |
+| FWS-6 | Wearable affiliate stack (Whoop/Oura/Element/AG1) -> Form 11; content default set to Whoop by MP-8 | fitness world map §7.10 | P2 |
 | FWS-7 | Owned domain at fitness identity (e.g. robbonavoglia.com) | fitness world map §7.7 | P2 |
 
 ## E. Bridge Pillar (genuinely unoccupied space) — `bridge-content`
@@ -92,7 +92,7 @@
 | MP-5 | BODI exit transition messaging plan (how Rob announces without burning bridges) | Reformation spec says exit; doesn't say HOW to communicate it |
 | MP-6 | Legion of Fitness FB group migration plan (rebrand? wind down? Hokage Legion?) | Asset exists; future is undecided |
 | MP-7 | Email list architecture decision [DONE] | Resolved via unified base, two tracks |
-| MP-8 | Wearable integration content plan (Whoop or Oura, when, what content angle) | FWS-6 is the affiliate; this is the content/programming layer |
+| MP-8 | Wearable integration content plan (Whoop or Oura, when, what content angle) [docs/business/2026-06-22-mp-8-wearable-integration-content-plan.md] [DONE] | Whoop selected for V1 content layer; FWS-6 remains affiliate-code fulfillment |
 | MP-9 | Cohort challenge ritual design (quarterly Legion challenges, paid entry tier) | Implied in fitness world map §7.8; needs spec |
 | MP-10 | Rob's actual time budget (hours/week, current allocation, target re-allocation post-reformation) | Unknown — affects every roadmap |
 
@@ -198,7 +198,7 @@ All 43 atoms now tracked as issues in `4444J99/hokage-chess`:
 | MP-5 | #38 | missing-piece, P1 |
 | MP-6 | #39 | missing-piece, P1 |
 | MP-7 | #40 | missing-piece, P1 |
-| MP-8 | #41 | missing-piece, P2 |
+| MP-8 | #41 | DONE |
 | MP-9 | #42 | missing-piece, P2 |
 | MP-10 | #43 | missing-piece, P0 |
 

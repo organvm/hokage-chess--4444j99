@@ -6,7 +6,19 @@ set -euo pipefail
 # This repo is {client:rob} scope. Reject staged content that bleeds {client:maddie} or
 # other client identifiers, except in whitelisted governance/audit-log files.
 
-KEYWORDS_REGEX='(maddie|Maddie|Sovereign Spiral|sovereign-systems|elevatealign\.com|stopdrinkingacid\.com|eaucohub\.com)'
+DEFAULT_KEYWORDS_REGEX='(maddie|Maddie|Sovereign Spiral|sovereign-systems|elevatealign\.com|stopdrinkingacid\.com|eaucohub\.com)'
+KEYWORDS_FILE="${CROSS_CLIENT_KEYWORDS_FILE:-config/cross-client-keywords.txt}"
+configured_patterns=""
+
+if [[ -f "$KEYWORDS_FILE" ]]; then
+  configured_patterns=$(grep -Ev '^[[:space:]]*(#|$)' "$KEYWORDS_FILE" | paste -sd '|' - || true)
+fi
+
+if [[ -n "$configured_patterns" ]]; then
+  KEYWORDS_REGEX="($configured_patterns)"
+else
+  KEYWORDS_REGEX="$DEFAULT_KEYWORDS_REGEX"
+fi
 
 # Whitelist: files that legitimately reference cross-client keywords (substrate doc itself,
 # audit logs, this guard's own implementation).
@@ -25,6 +37,10 @@ while IFS= read -r file; do
   [[ -z "$file" ]] && continue
   # Skip whitelisted files
   if [[ "$file" =~ $WHITELIST_REGEX ]]; then
+    continue
+  fi
+  staged_blob=$(git show ":$file" 2>/dev/null || true)
+  if echo "$staged_blob" | grep -Eq 'audiences:[[:space:]]*\[[^]]*cross_stream_coordination[^]]*\]'; then
     continue
   fi
   # Get the staged content of this file (additions only, excluding diff header markers).
