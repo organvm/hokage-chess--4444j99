@@ -39,8 +39,7 @@ describe("getTarget", () => {
   });
 
   it("should throw for unknown phase", () => {
-    const unknownPhase = "q5_unknown" as Parameters<typeof getTarget>[0];
-    expect(() => getTarget(unknownPhase)).toThrow("Unknown phase");
+    expect(() => getTarget("q5_unknown" as any)).toThrow("Unknown phase");
   });
 });
 
