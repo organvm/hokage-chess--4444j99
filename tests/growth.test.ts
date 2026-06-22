@@ -39,7 +39,7 @@ describe("getTarget", () => {
   });
 
   it("should throw for unknown phase", () => {
-    expect(() => getTarget("q5_unknown" as GrowthPhase)).toThrow("Unknown phase");
+    expect(() => getTarget("q5_unknown" as any)).toThrow("Unknown phase");
   });
 });
 

@@ -42,7 +42,7 @@ We are dealing with two native audiences and one target "hybrid" audience.
 2.  **Fitness-Native Audience:** "I want to lose weight / get stronger. I need a coach and a program."
 3.  **The Overlap (The True Fans):** "I am on a journey of self-improvement. I value discipline, I resonate with the anime/underdog mentality, and I want to optimize both my mind and my body."
 
-**The Strategic Goal:** Use Bridge Content to let the overlap audience self-identify. MP-3 now sets the conservative operating rule: chess viewers should not be assumed to want standalone fitness content. They may accept fitness when it is framed as chess stamina, focus, tilt control, recovery, or a broader discipline-transfer lesson. The bridge is connective tissue, not permission to merge every channel by default.
+**The Strategic Goal:** Use Bridge Content (Saturdays) to migrate Chess-Natives to the Fitness funnel, and Fitness-Natives to the Chess stream, ultimately consolidating the most loyal followers into the Overlap group.
 
 ---
 
@@ -55,7 +55,6 @@ The most critical operational decision is which channels merge the pillars and w
 *   *Implementation:*
     *   **Channel 1:** Hokage Chess (100% Chess + Bridge content framed around mental performance).
     *   **Channel 2:** Rob Bonavoglia Fitness (100% Fitness + Bridge content framed around physical programming).
-*   *MP-3 guardrail:* A bridge upload belongs on Hokage only when the chess-performance connection is explicit in the hook and the post-review metrics meet the MP-3 thresholds.
 
 ### B. Instagram / TikTok / Shorts: **UNIFIED**
 *   *Why:* Short-form content and Instagram are personality-driven. The algorithm is better at finding the right audience for individual clips, and users expect a holistic "Day in the Life" view of the creator.
@@ -89,5 +88,5 @@ The most critical operational decision is which channels merge the pillars and w
 
 ## 6. Next Steps
 1.  Align social media bios on unified platforms (IG/TikTok/Twitch) to explicitly mention both domains: *"Chess @ 1350 ♟️ | Fitness Coach 🏋️ | Building the ultimate training arc."*
-2.  Launch the Unified Newsletter ledger with separate chess and fitness tracks plus an optional bridge segment, per MP-7 and MP-3.
+2.  Launch the Unified Newsletter (The Quest Log) to begin migrating disparate audiences into a single owned list.
 3.  Execute the weekly content rhythm (MP-2) using this channel routing architecture.
