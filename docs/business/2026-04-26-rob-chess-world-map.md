@@ -277,7 +277,8 @@ The single biggest gap. Every comparable adult-improver channel — Solveig Frib
 #### #2. **Discord community (free + paid tier)**
 Adult improvers are isolated by default. A Hokage-themed Discord (Hidden Leaf Village / Chunin Exams / Jutsu of the Week) is structurally on-brand, near-zero cost, and is the natural home for the $150/mo Mentorship tier when it ships. Chess Academy (51K members) and ChessDojo's Discord show the playbook. A Discord lets Rob convert YouTube viewers into named relationships, which is the asset that survives platform algorithm shifts.
 
-#### #3. **Newsletter (Beehiiv, free with optional paid tier)**
+#### #3. **Newsletter (Kit/Beehiiv, free with optional paid tier) (CWS-3)**
+*Update (2026-06-21 per MP-7):* The newsletter operates on a **single unified database** alongside the fitness pillar. The "Hokage Scroll" is not a standalone database, but the **chess track** (segment/tag) within the master list.
 The Highground Chess Substack, ChessDojo Patreon, and Perpetual Chess newsletter all show that chess audiences subscribe. Beehiiv's economics (0% commission on ads/boosts/digital products, vs. Substack's 10% on paid subs) and its growth-side recommendations/boosts marketplace make it the right pick. A weekly "Hokage Scroll" — game of the week, lesson of the week, mission of the week, lineage callback to Naruto canon — is consistent with Rob's existing voice and creates the addressable list he doesn't currently own.
 
 #### #4. **YouTube Shorts (decoupled from long-form, parallel feed)**
