@@ -182,7 +182,7 @@ This is the strategically distinctive cohort and the reason this ritual matters 
 | :--- | :--- | :--- |
 | **FWS-2 — Paid community** | *Platform.* The challenge runs on top of the Skool/Discord "Hidden Leaf Legion" hub; the $49/mo conversion target *is* the FWS-2 community. | Must exist before the conversion step has anywhere to convert *to*. The challenge can soft-launch on the existing free FB group, but the recurring-revenue payoff needs the gated tier. |
 | **MP-1 — Pillar architecture** | *Bridge viability.* "Hokage Bulk" only works if the Overlap audience exists. | CANONICAL. Pillar 3 defines the Bridge; this doc productizes it. |
-| **MP-2 — Content rhythm** | *Distribution.* Challenge content fills the existing weekly cadence, not a parallel one. | PROPOSED. Transformation reels → Tue/Thu fitness slots; recap → Sunday Quest Log. |
+| **MP-2 — Content rhythm** | *Distribution.* Challenge content fills the existing weekly cadence, not a parallel one. | CANONICAL. Transformation reels fill Tue/Thu fitness slots; recap fills Sunday Quest Log. |
 | **BR-1 — Bridge content** | *Audience prep.* Cross-pollinates chess/fitness audiences ahead of Hokage Bulk. | Run continuously; gates the Q4 cohort's readiness. |
 | **MP-10 — Time budget** | *Capacity constraint.* Weekly check-ins + live calls are the heaviest recurring time cost in the whole architecture. | The "Sensei" cap (10 seats) and one-challenge-at-a-time rule exist to protect against time blowout. Reconcile cohort size with MP-10 before scaling. |
 
@@ -203,5 +203,5 @@ This is the strategically distinctive cohort and the reason this ritual matters 
 *Companion documents:*
 - `2026-04-26-rob-fitness-world-map.md` §7.8 — the white-space slot this doc fills
 - `2026-06-21-pillar-architecture-taxonomy.md` (MP-1) — pillar definitions; Bridge = Pillar 3
-- `2026-04-30-cross-pillar-content-rhythm-spec.md` (MP-2) — the cadence challenge content fills
+- `2026-04-26-rob-content-rhythm.md` (MP-2) — the cadence challenge content fills
 - `2026-04-25-bodi-funnel-with-premium-content-architecture.md` — the funnel this ritual feeds

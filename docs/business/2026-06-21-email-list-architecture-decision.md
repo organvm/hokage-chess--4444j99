@@ -59,9 +59,9 @@ Those are different promises. Mixing them too early makes the subscription less 
 
 Rob is the common asset. The database should recognize one person can care about more than one Rob surface. Separate databases would lose that signal, duplicate contacts, complicate unsubscribe compliance, and hide the cross-pollination measurement MP-3 needs.
 
-### 4. Three newsletters overfits before cadence exists
+### 4. Three newsletters overfits before bridge demand is proven
 
-The bridge pillar is strategically distinctive, but it does not yet have enough recurring output to justify its own newsletter. Making it a third publication creates calendar pressure before the content rhythm exists. The bridge should first prove itself as a series inside the shared base.
+The bridge pillar is strategically distinctive, but it does not yet have enough recurring output or engagement data to justify its own newsletter. MP-2 gives bridge a Saturday lane and a biweekly major publish target; that should first prove itself as a tagged series inside the shared base before becoming a standalone publication.
 
 ### 5. The repo ships a portable capture path
 
@@ -107,9 +107,9 @@ Do not silently add a chess subscriber to fitness sends, or a fitness subscriber
 
 | Track | Launch cadence | Mature cadence |
 |---|---|---|
-| Chess | Welcome sequence + launch notices until list has a real content rhythm | Weekly, tied to Jutsu / Boss Battle output |
-| Fitness | Monthly or biweekly until L0 reel cadence stabilizes | Weekly if Rob is publishing enough fitness material |
-| Bridge | Monthly max, only when there is a real thesis artifact | Monthly or every fourth send, based on engagement |
+| Chess | Weekly once MP-2 Monday/Wednesday/Friday output is running | Weekly, tied to Jutsu / Boss Battle output |
+| Fitness | Weekly once MP-2 Tuesday/Thursday output is running; otherwise biweekly | Weekly if Rob is publishing enough fitness material |
+| Bridge | Monthly max until BR-1 engagement is proven | Monthly or every fourth send, based on engagement |
 
 Bridge sends should be measured as experiments, not treated as guaranteed universal-interest emails.
 
