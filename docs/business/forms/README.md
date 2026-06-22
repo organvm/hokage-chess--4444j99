@@ -1,7 +1,7 @@
 # Pre-Work Forms Pack
 
 **Date:** 2026-04-28
-**Purpose:** Convert the eight Rob-blocking asks (and two internal compounds) into fill-out-of-session forms. Each form is single-page, addressable, and produces a discrete artifact when complete.
+**Purpose:** Convert the eight Rob-blocking asks and three diagnostic/internal compounds into fill-out-of-session forms. Each form is single-page, addressable, and produces a discrete artifact when complete.
 
 > *"Asks are black holes — physical address required."* This folder gives every open ask its own physical address. Fill any form asynchronously. Return as PR, comment, or paste-back into next session.
 
@@ -22,6 +22,7 @@
 | 09 | [Domain lexicon extension](09-domain-lexicon-extension.md) | Anthony or any operator | 10-20 min | Scoring engine specialized to a new domain without forking |
 | 10 | [Magnetism measurement card](10-magnetism-measurement-card.md) | Anthony (weekly) | 10 min | Rhetorical magnetism formula → measured signal |
 | 11 | [Wearable affiliate selection](11-wearable-affiliate-selection.md) | Rob | 10 min | Wearable affiliate integration across content stack |
+| 13 | [Time budget audit](13-time-budget-audit.md) | Rob | 2 min/day + 10 min summary | MP-10 live verification; weekly capacity made explicit |
 
 ---
 
@@ -37,7 +38,7 @@ Section C — return instruction
 Footer — links to the source artifact + any blocked-on items
 ```
 
-Forms 02, 05, 07 are **single-decision** (one field returns the form). Forms 01, 04, 06 are **inventory** (repeated rows). Forms 03, 08 are **disclosure / production-prep**. Forms 09 and 10 are **internal compounds** that close the loop on the magnetic-figure thesis.
+Forms 02, 05, 07 are **single-decision** (one field returns the form). Forms 01, 04, 06 are **inventory** (repeated rows). Forms 03, 08 are **disclosure / production-prep**. Forms 09 and 10 are **internal compounds** that close the loop on the magnetic-figure thesis. Form 13 is the capacity audit that verifies whether MP-10's 20-25 hr/week model matches Rob's real week.
 
 ## Lowest-effort first to clear
 

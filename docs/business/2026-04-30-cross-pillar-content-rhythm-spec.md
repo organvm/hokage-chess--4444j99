@@ -1,12 +1,12 @@
 # [MP-2] Cross-pillar content rhythm spec (when chess vs. fitness vs. bridge)
 
-**Date:** 2026-04-26
-**Status:** PROPOSED
+**Date:** 2026-04-30
+**Status:** PROPOSED; time budget updated from MP-10 on 2026-06-22
 **Related Atoms:** MP-10 (Time Budget), BR-1 (Bridge Content), MP-1 (Pillar Taxonomy)
 
 ## 1. Executive Summary
 
-This document defines the production cadence and publishing rhythm for Rob's dual-pillar ecosystem (Hokage Chess and BODI Fitness). The primary goal is to establish a predictable, sustainable weekly schedule that accommodates both pillars, seamlessly integrates "Bridge" content, and respects the time constraints that will be defined in MP-10.
+This document defines the production cadence and publishing rhythm for Rob's dual-pillar ecosystem (Hokage Chess and BODI Fitness). The primary goal is to establish a predictable, sustainable weekly schedule that accommodates both pillars, seamlessly integrates "Bridge" content, and respects the time constraints defined in MP-10.
 
 Without a production cadence, the content output lacks consistency, risking audience engagement and making cross-pollination between the two pillars nearly impossible.
 
@@ -50,18 +50,36 @@ Bridge content is the critical connective tissue preventing the two pillars from
     *   "How discipline in daily fitness translates directly to discipline in chess study."
     *   "Opening preparation (Chess) vs. Warm-up routines (Fitness)."
 
-## 5. Time Budget per Pillar (Dependent on MP-10)
+## 5. Time Budget per Pillar (Resolved by MP-10)
 
-*Note: This section requires final numbers from MP-10 (Rob's actual time budget: hours/week, current allocation, target re-allocation).*
+Canonical budget source: `docs/business/2026-06-22-rob-time-budget.md`.
 
-The production cadence must fundamentally align with the target time reallocation to ensure long-term sustainability. Assuming a hypothetical 20-hour weekly content production budget, the split should structurally mirror the publishing frequency:
+MP-10 sets a **20 hr/week baseline cap** and a **25 hr/week stretch cap** until Rob completes a fresh one-week time audit. The binding constraint is BODI L1 manual scraping: current docs place it at 15-20 hrs/week, and the target reallocation caps it at roughly 4-5 hrs/week.
 
-*   **Chess Pillar (Mon/Wed/Fri):** ~40% of time budget (e.g., 8 hours)
-*   **Fitness Pillar (Tue/Thu):** ~30% of time budget (e.g., 6 hours)
-*   **Bridge Content (Saturday):** ~15% of time budget (e.g., 3 hours)
-*   **Quest Log / Admin (Sunday):** ~15% of time budget (e.g., 3 hours)
+### 20 hr/week baseline
 
-*Action Item:* Update exact hour allocations once MP-10 is closed and the realistic hour count is finalized.
+| Pillar / function | Hours | Notes |
+|---|---:|---|
+| Fitness/BODI operations | 10.0 | 4h targeted L1, 3h L0 content routing, 3h L2/L3 follow-up. |
+| Hokage production | 3.0 | One Jutsu of the Week long-form piece. |
+| Community | 1.5 | Discord public rituals only. |
+| Short-form / recuts | 2.0 | Batched from existing footage; no bespoke daily production. |
+| Newsletter / admin / metrics | 1.5 | Quest Log, tracking, hygiene. |
+| Flex bank | 2.0 | Rotate one of Boss Battle, BR-1, FWS-3, or cohort prep. |
+
+### 25 hr/week stretch
+
+| Pillar / function | Hours | Notes |
+|---|---:|---|
+| Fitness/BODI operations | 13.0 | 5h targeted L1 hard cap, 4h L0, 4h L2/L3. |
+| Hokage production | 3.0 | One Jutsu of the Week long-form piece. |
+| Community | 1.5 | Discord public rituals only. |
+| Short-form / recuts | 2.5 | Daily output only if batched. |
+| Newsletter / admin / metrics | 2.0 | Owned-audience and measurement loop. |
+| Bridge content | 1.5 | One bridge artifact every two weeks. |
+| Reserve | 1.5 | Boss Battle, product work, cohort prep, or Twitch, one at a time. |
+
+The calendar in section 2 should be treated as an editorial rhythm, not a license to create seven fully bespoke pieces every week. If BODI L1 rises above 5 hrs/week, the flex and stretch items are paused first.
 
 ## 6. Production-Friction Estimates per Format
 
@@ -86,5 +104,5 @@ To sustain the cadence without burnout, we need to estimate the friction (time +
 ## 7. Next Steps
 
 1.  Rob to review and approve the baseline Mon-Sun cadence structure.
-2.  Finalize MP-10 to lock in the exact hours allocated per pillar.
-3.  Draft the first 2 weeks of content (14 atomic posts) following this exact rhythm as a proof-of-concept.
+2.  Rob to fill `docs/business/forms/11-time-budget-audit.md` for one normal week.
+3.  Draft the first 2 weeks of content as batched/repurposed atomic posts, keeping the weekly load inside the MP-10 cap.

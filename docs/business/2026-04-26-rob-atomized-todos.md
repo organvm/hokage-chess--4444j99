@@ -94,7 +94,7 @@
 | MP-7 | Email list architecture decision [DONE] | Resolved via unified base, two tracks |
 | MP-8 | Wearable integration content plan (Whoop or Oura, when, what content angle) | FWS-6 is the affiliate; this is the content/programming layer |
 | MP-9 | Cohort challenge ritual design (quarterly Legion challenges, paid entry tier) | Implied in fitness world map §7.8; needs spec |
-| MP-10 | Rob's actual time budget (hours/week, current allocation, target re-allocation post-reformation) | Unknown — affects every roadmap |
+| MP-10 | Rob's actual time budget (hours/week, current allocation, target re-allocation post-reformation) | Resolved by `docs/business/2026-06-22-rob-time-budget.md`; live verification form at `docs/business/forms/11-time-budget-audit.md` |
 
 ---
 
@@ -136,7 +136,7 @@ MP-10 (time budget)    ─→ everything else's feasibility
 4. **MP-7** (email architecture decision doc — informs Beehiiv setup)
 5. **BR-2** (discipline-transfers essay — Rob's positioning thesis)
 6. **AF-3** (deepen timeslices, 1-2hr)
-7. **MP-2, MP-5, MP-6, MP-9, MP-10** (remaining design docs)
+7. **MP-2, MP-5, MP-6, MP-9** (remaining design docs; MP-10 now has a canonical operating model)
 
 ## Suggested execution order (with Rob input)
 
@@ -202,7 +202,9 @@ All 43 atoms now tracked as issues in `4444J99/hokage-chess`:
 | MP-9 | #42 | missing-piece, P2 |
 | MP-10 | #43 | missing-piece, P0 |
 
-**P0 (NOW / unblocking) — 8 atoms:** RB-1/2/3/4/5/10/11, BR-1, MP-1, MP-10
+**P0 (NOW / unblocking) — 9 open atoms after MP-10 closure:** RB-1/2/3/4/5/10/11, BR-1, MP-1
 **P1 (SOON) — 24 atoms**
 **P2 (GROWTH) — 10 atoms**
 **P3 (HORIZON) — 1 atom** (CWS-7 Chessable course)
+
+**2026-06-22 closure note:** MP-10 / #43 is no longer a missing doc. The canonical operating model lives at `docs/business/2026-06-22-rob-time-budget.md`; Rob-side live verification is captured by `docs/business/forms/11-time-budget-audit.md`.
