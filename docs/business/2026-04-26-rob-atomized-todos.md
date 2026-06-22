@@ -44,7 +44,7 @@
 | ID | Atom | Source | Priority | Cost |
 |---|---|---|---|---|
 | AF-1 | Delete duplicate `PDE-AUDIT-BASELINE.md` at substrate root | hall-monitor audit | P2 | 30s |
-| AF-2 | `bodi-constellation.md` uses markdown extension (file is markdown) | hall-monitor audit | P2 | 1min |
+| AF-2 | Rename `bodi-constellation.yaml` → `.md` (file is markdown) | hall-monitor audit | P2 | 1min |
 | AF-3 | Deepen Stratum 2 timeslices (historic/current/futures, real research) | hall-monitor audit | P2 | 1-2hr |
 | AF-4 | Update PRT-048 IRF row (says "skill not built" but DONE-474 confirms skill exists) | hall-monitor audit | P2 | 2min |
 | AF-5 | Commit corpvs `data/fossil/fossil-record.jsonl` (3 uncommitted lines) — parity break | hall-monitor audit | P1 | 1min |
