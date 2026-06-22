@@ -19,6 +19,19 @@ This preserves the MP-7 architecture: one owned subscriber ledger, chess as the
 default track, fitness as a separate track, and bridge content only by explicit
 interest or engagement.
 
+## Source verification
+
+Checked on 2026-06-22:
+
+- Beehiiv pricing confirms Launch is free up to 2,500 subscribers, includes API
+  access, and Beehiiv takes 0% of paid subscription revenue:
+  `https://www.beehiiv.com/pricing`
+- Beehiiv's create-subscription API confirms
+  `POST /v2/publications/:publicationId/subscriptions`, bearer auth, required
+  `subscriptions:write` scope, `custom_fields`, optional `automation_ids`, and
+  optional beta `newsletter_list_ids`:
+  `https://developers.beehiiv.com/api-reference/subscriptions/create`
+
 ---
 
 ## Beehiiv setup
@@ -212,4 +225,3 @@ than skipping the cadence.
 | First issue shipped | Draft above is ready to paste/send after Beehiiv publication exists |
 | Signup form linked from YouTube/Twitch/Chess.com | Canonical URL and placement copy defined above |
 | Weekly cadence | Homepage copy and draft format now commit to Sunday Quest Log |
-
