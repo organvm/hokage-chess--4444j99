@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
+import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 const oswald = localFont({
   src: "./fonts/Oswald-Variable.ttf",
@@ -12,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://hokagechess.com"),
   title: "Hokage Chess — The Climb Starts Here",
   description:
-    "The road from low-advanced to grandmaster, told through chess discipline, iron discipline, faith, family, and a community ascending together.",
+    "The road from low-advanced to grandmaster, told from inside the climb. No titles. No shortcuts. Just the grind, the breakthroughs, and a community ascending together.",
   keywords: [
     "chess improvement",
     "chess community",
@@ -20,15 +33,13 @@ export const metadata: Metadata = {
     "chess training",
     "hokage chess",
     "chess journey",
-    "iron discipline",
-    "faith and family",
   ],
   authors: [{ name: "Rob Bonavoglia", url: "https://www.youtube.com/@HokageChess" }],
   creator: "Rob Bonavoglia",
   openGraph: {
     title: "Hokage Chess — The Climb Starts Here",
     description:
-      "Chess discipline, iron discipline, faith, family, and the road from low-advanced to grandmaster.",
+      "The road from low-advanced to grandmaster, told from inside the climb.",
     url: "https://hokagechess.com",
     siteName: "Hokage Chess",
     type: "website",
@@ -40,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hokage Chess — The Climb Starts Here",
     description:
-      "Chess discipline, iron discipline, faith, family, and the road from low-advanced to grandmaster.",
+      "The road from low-advanced to grandmaster, told from inside the climb.",
     creator: "@HokageChess",
     // twitter:image auto-injected from src/app/twitter-image.png
   },
@@ -61,7 +72,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${oswald.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${jetbrainsMono.variable} ${oswald.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
