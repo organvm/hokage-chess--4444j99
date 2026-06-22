@@ -53,7 +53,7 @@
 
 | ID | Atom | Source | Priority |
 |---|---|---|---|
-| CWS-1 | Twitch live streaming setup (Hokage-themed live training arcs) | chess world map §7.1 | P1 |
+| CWS-1 | Twitch live streaming setup (Hokage-themed live training arcs) | chess world map §7.1 in issue text / §8.1 in current file; setup runbook `docs/business/2026-06-22-cws-1-twitch-live-training-arc-setup.md` | P1 |
 | CWS-2 | Discord community (free tier + paid Hidden Leaf Village structure) | chess world map §7.2 | P1 |
 | CWS-3 | Beehiiv newsletter "Hokage Scroll" weekly | chess world map §7.3 | P1 |
 | CWS-4 | YouTube Shorts decoupled-feed strategy (tactic-of-the-day) | chess world map §7.4 | P2 |

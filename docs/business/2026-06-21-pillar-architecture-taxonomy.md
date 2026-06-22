@@ -63,6 +63,7 @@ The most critical operational decision is which channels merge the pillars and w
 ### C. Live Streaming (Twitch): **UNIFIED**
 *   *Why:* Twitch is a parasocial, community-first platform. Variety streaming is completely normalized (e.g., "Just Chatting" -> "Chess" -> "Fitness Q&A").
 *   *Implementation:* One channel. A stream might start with a 30-minute fitness/nutrition Q&A and transition into a 2-hour chess speedrun.
+*   *Operational runbook:* `docs/business/2026-06-22-cws-1-twitch-live-training-arc-setup.md` defines the CWS-1 channel setup, scene stack, live formats, safety rules, and first four-week slate.
 
 ### D. The Newsletter: **UNIFIED**
 *   *Why:* Email is an owned audience. It does not suffer from algorithmic penalties. A newsletter is a digest of the creator's brain.
