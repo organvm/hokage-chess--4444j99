@@ -90,6 +90,8 @@ The architecture below adds **content surfaces at every level** without restruct
 - `content_pack_engagement` (boolean — did they DM Rob about any of the 5 pieces?)
 - `live_qa_attended` (boolean — first ritual attendance is a strong L3 conversion signal)
 
+**Schema register:** `docs/business/teamzy-schema-2026-04.md` lists the current known Teamzy field surface, Rob-specific custom-field unknowns, and the collision rules for these additions plus content-attribution fields.
+
 ### 3.4 L3 — VIP / Customer (UNCHANGED commerce, ADDED premium series)
 
 **Mechanism remains:** L2 warmth → product purchase → private group chat (VIP).
@@ -137,7 +139,7 @@ The architecture below adds **content surfaces at every level** without restruct
 - Send all premium reel links (FB Page reels, IG reels, inspirational shorts) — populates §3.1 inventory
 - Send 70 more constellation profiles (current 5: Adler, Negreanu, Freeman, Spencer, Mitro)
 - Confirm Facebook Page handle + Instagram handle as canonical L0 surfaces
-- Disclose Teamzy field schema (existing fields) so §3.3 additions can be specified, not duplicated
+- Verify Rob-specific Teamzy custom fields against `docs/business/teamzy-schema-2026-04.md` so §3.3 additions can be created or mapped without duplication
 
 ### User/system work (next session, on receipt of Rob materials)
 - Compile incoming reel links into a master file (recommend: `docs/business/2026-04-2X-rob-premium-content-inventory.md`)

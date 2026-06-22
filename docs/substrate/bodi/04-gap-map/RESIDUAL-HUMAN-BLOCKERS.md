@@ -23,7 +23,7 @@
 
 ### Rob Bonavoglia (3 items)
 
-1. **CONFIRM Teamzy Field Schema** — Send a screenshot or list of current fields so content-attribution tracking can be added without collision.
+1. **VERIFY Teamzy Custom Fields** — `docs/business/teamzy-schema-2026-04.md` now records the known current field surface and proposed additions. Rob still needs to send a screenshot, CSV header export, or custom-field list so unknown Rob-specific fields can be checked before Teamzy changes.
 2. **SEND Reel/Short Links** — Provide existing reel and inspirational-short URLs for the content inventory (L0).
 3. **CONFIRM Handles** — Verify canonical Facebook and Instagram handles for the production stack.
 
@@ -49,10 +49,10 @@
 
 ## What's Ready When They Return
 
-When Rob sends his links and Teamzy schema, the system can immediately:
+When Rob sends his links and Teamzy custom-field verification, the system can immediately:
 
 1. Populate the content inventory (L0) from real assets
-2. Add Teamzy fields for content attribution
+2. Create or map Teamzy fields for content attribution
 3. Track owned-media conversion rates
 4. Begin the L1-to-L0 shift (hunting → farming)
 

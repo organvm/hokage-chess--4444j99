@@ -35,7 +35,7 @@
 | RB-6 | Discord server provisioning (~80 min/wk owned by Rob) | PRT-041 | P1 |
 | RB-7 | Episode 1 green-light + first opponent/jutsu pick | PRT-040 | P1 |
 | RB-8 | Canonical Facebook Page + Instagram handles | persona open threads | P1 |
-| RB-9 | Teamzy CRM field schema | PRT-043, persona open threads | P1 |
+| RB-9 | Teamzy CRM field schema (`docs/business/teamzy-schema-2026-04.md`; Rob-specific custom fields still need verification) | PRT-043, persona open threads | P1 |
 | RB-10 | hokagechess.com domain registration via Cloudflare (~5min) | PRT-027 | P0 |
 | RB-11 | BODI Reformation Spec — read + accept/reject avatar premise | reformation spec (e86777f) | P0 |
 
