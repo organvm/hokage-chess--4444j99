@@ -30,11 +30,11 @@ The chosen architecture is the second option, with the bridge handled as a conse
 
 ## Why this wins
 
-### 1. MP-3 is still unknown
+### 1. MP-3 does not justify a forced merge
 
-The audience-overlap question has not been measured. A single weekly "chess + fitness + bridge" newsletter would assume that chess viewers want fitness content and that fitness leads want chess content. That may be true for Rob's strongest identity-fit followers, but it is not safe as the default.
+MP-3 is now recorded in `docs/business/2026-06-22-audience-overlap-analysis.md`. Its operating answer is conservative: chess viewers may care about fitness when it is framed as chess stamina, focus, tilt control, recovery, or discipline transfer, but they should not be assumed to want standalone workouts, nutrition, BODI offers, or generic gym content.
 
-Until MP-3 returns data, the list should preserve optionality:
+Until Rob collects survey, analytics, and subscriber-behavior data, the list should preserve optionality:
 - chess leads receive chess by default,
 - fitness leads receive fitness by default,
 - bridge content is opt-in or behavior-triggered.
@@ -115,9 +115,9 @@ Bridge sends should be measured as experiments, not treated as guaranteed univer
 
 ---
 
-## Measurement plan for MP-3
+## Measurement plan from MP-3
 
-MP-7 should generate the data MP-3 needs rather than wait passively for MP-3 to exist.
+MP-7 should generate the live data MP-3 needs rather than treating the strategy doc as proof of audience overlap.
 
 Track these for 90 days after both pillar capture paths exist:
 
@@ -205,7 +205,7 @@ Whatever vendor is used, preserve:
 1. Keep the Hokage site capture path focused on chess by default.
 2. Add source and pillar tagging before importing any fitness leads.
 3. When a fitness capture page exists, default it to `pillar:fitness`.
-4. Add bridge opt-in language only after the first real `Discipline Stack` artifact exists.
+4. Add bridge opt-in language only after the first real `Discipline Stack` artifact exists, then judge it against the MP-3 thresholds.
 5. Update future Beehiiv/Kit/Teamzy docs to reference this architecture before choosing vendor-specific fields.
 
 ---
@@ -217,4 +217,4 @@ This closes MP-7 / #40 when:
 1. The canonical architecture is recorded as **one database, two primary tracks, bridge segment**.
 2. CWS-3 and FWS-1 are reconciled as track-level work, not separate databases.
 3. The Kit vs Beehiiv question is scoped as a platform/vendor choice, not the list-architecture choice.
-4. MP-3 has a 90-day measurement plan tied to tags and bridge-send behavior.
+4. MP-3 has a measurement plan tied to tags, bridge-send behavior, and platform survey/analytics checks.

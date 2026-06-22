@@ -87,7 +87,7 @@
 |---|---|---|
 | MP-1 | Pillar architecture taxonomy doc (Chess / Fitness / Bridge — what's shared, what's separate) | No top-level map ties the two worlds together |
 | MP-2 | Cross-pillar content rhythm spec (when chess content vs. fitness vs. bridge) | No production cadence exists |
-| MP-3 | Audience overlap analysis — survey/data on whether chess viewers care about fitness | Unknown; affects whether to merge or separate channels |
+| MP-3 | Audience overlap analysis [docs/business/2026-06-22-audience-overlap-analysis.md] | DONE at strategy-system level; live survey/analytics remain Rob-owned |
 | MP-4 | Avatar archetype canonical doc (Hokage underdog + dual-discipline persona) | Implied across docs, never formally specified |
 | MP-5 | BODI exit transition messaging plan (how Rob announces without burning bridges) | Reformation spec says exit; doesn't say HOW to communicate it |
 | MP-6 | Legion of Fitness FB group migration plan (rebrand? wind down? Hokage Legion?) | Asset exists; future is undecided |
@@ -124,7 +124,7 @@ RB-3 (75-person list) ─→ PRT-046 master file
 RB-10 (domain)        ─→ PRT-028 (Vercel deploy)
 
 MP-1 (pillar taxonomy) ─→ MP-2, MP-7
-MP-3 (audience overlap) ─→ MP-7 decision
+MP-3 (audience overlap) ─→ MP-7 decision (resolved as conservative two-track + bridge segment)
 MP-10 (time budget)    ─→ everything else's feasibility
 ```
 
