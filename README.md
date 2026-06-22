@@ -9,7 +9,7 @@ A dual-purpose repository serving as the deployable landing surface for Rob Bona
 
 - ✅ **Dynamic Persona Routing**: `landing-engine` primitive for dynamically generating per-persona routes.
 - ✅ **Brand-Agnostic Engines**: Universal title, thumbnail, and video-idea scoring injected with domain vocabulary.
-- ✅ **Kit Integration**: Email-capture handler using Kit.
+- ✅ **Beehiiv Integration**: Hokage Scroll email-capture handler using Beehiiv.
 - ✅ **Modern Tech Stack**: Built with Next.js 16, React 19, TypeScript, and Tailwind CSS v3.
 
 ## Quick Start

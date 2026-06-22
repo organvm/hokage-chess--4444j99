@@ -3,7 +3,9 @@ import { POST } from "../src/app/api/subscribe/route";
 
 const ENDPOINT = "http://localhost/api/subscribe";
 const TEST_API_KEY = "test_api_key";
-const TEST_FORM_ID = "test_form_123";
+const TEST_PUBLICATION_ID = "pub_00000000-0000-0000-0000-000000000000";
+const TEST_AUTOMATION_ID = "aut_00000000-0000-0000-0000-000000000000";
+const TEST_NEWSLETTER_LIST_ID = "nl_list_00000000-0000-0000-0000-000000000000";
 
 function buildRequest(body: BodyInit): Request {
   return new Request(ENDPOINT, {
@@ -18,8 +20,10 @@ describe("POST /api/subscribe", () => {
 
   beforeEach(() => {
     // Default to fully-configured env so each branch test can opt in/out.
-    vi.stubEnv("KIT_API_KEY", TEST_API_KEY);
-    vi.stubEnv("NEXT_PUBLIC_KIT_FORM_ID", TEST_FORM_ID);
+    vi.stubEnv("BEEHIIV_API_KEY", TEST_API_KEY);
+    vi.stubEnv("BEEHIIV_PUBLICATION_ID", TEST_PUBLICATION_ID);
+    vi.stubEnv("BEEHIIV_AUTOMATION_ID", TEST_AUTOMATION_ID);
+    vi.stubEnv("BEEHIIV_NEWSLETTER_LIST_ID", TEST_NEWSLETTER_LIST_ID);
   });
 
   afterEach(() => {
@@ -83,8 +87,8 @@ describe("POST /api/subscribe", () => {
   });
 
   describe("config_incomplete branch", () => {
-    it("returns 503 when KIT_API_KEY is absent", async () => {
-      vi.stubEnv("KIT_API_KEY", "");
+    it("returns 503 when BEEHIIV_API_KEY is absent", async () => {
+      vi.stubEnv("BEEHIIV_API_KEY", "");
       const req = buildRequest(JSON.stringify({ email: "user@example.com" }));
       const res = await POST(req);
       expect(res.status).toBe(503);
@@ -98,8 +102,8 @@ describe("POST /api/subscribe", () => {
       expect(body.detail).toBeTruthy();
     });
 
-    it("returns 503 when NEXT_PUBLIC_KIT_FORM_ID is absent", async () => {
-      vi.stubEnv("NEXT_PUBLIC_KIT_FORM_ID", "");
+    it("returns 503 when BEEHIIV_PUBLICATION_ID is absent", async () => {
+      vi.stubEnv("BEEHIIV_PUBLICATION_ID", "");
       const req = buildRequest(JSON.stringify({ email: "user@example.com" }));
       const res = await POST(req);
       expect(res.status).toBe(503);
@@ -108,8 +112,8 @@ describe("POST /api/subscribe", () => {
     });
   });
 
-  describe("kit_error branch", () => {
-    it("returns 502 with reason=kit_error when Kit returns 4xx", async () => {
+  describe("beehiiv_error branch", () => {
+    it("returns 502 with reason=beehiiv_error when Beehiiv returns 4xx", async () => {
       fetchSpy = vi.spyOn(global, "fetch").mockResolvedValue(
         new Response(JSON.stringify({ message: "bad request" }), {
           status: 400,
@@ -127,12 +131,12 @@ describe("POST /api/subscribe", () => {
         detail: string;
       };
       expect(body.ok).toBe(false);
-      expect(body.reason).toBe("kit_error");
+      expect(body.reason).toBe("beehiiv_error");
       expect(body.status).toBe(400);
       expect(body.detail).toBe("bad request");
     });
 
-    it("returns 502 when Kit returns 5xx", async () => {
+    it("returns 502 when Beehiiv returns 5xx", async () => {
       fetchSpy = vi.spyOn(global, "fetch").mockResolvedValue(
         new Response(JSON.stringify({ error: "server down" }), {
           status: 500,
@@ -144,11 +148,11 @@ describe("POST /api/subscribe", () => {
       const res = await POST(req);
       expect(res.status).toBe(502);
       const body = (await res.json()) as { reason: string; detail: string };
-      expect(body.reason).toBe("kit_error");
+      expect(body.reason).toBe("beehiiv_error");
       expect(body.detail).toBe("server down");
     });
 
-    it("falls back to 'unknown' detail when Kit error body is unparseable", async () => {
+    it("falls back to 'unknown' detail when Beehiiv error body is unparseable", async () => {
       fetchSpy = vi
         .spyOn(global, "fetch")
         .mockResolvedValue(new Response("plain-text-error", { status: 503 }));
@@ -157,15 +161,15 @@ describe("POST /api/subscribe", () => {
       const res = await POST(req);
       expect(res.status).toBe(502);
       const body = (await res.json()) as { reason: string; detail: string };
-      expect(body.reason).toBe("kit_error");
+      expect(body.reason).toBe("beehiiv_error");
       expect(body.detail).toBe("unknown");
     });
   });
 
   describe("ok branch", () => {
-    it("returns 200 with ok=true when Kit accepts the subscription", async () => {
+    it("returns 200 with ok=true when Beehiiv accepts the subscription", async () => {
       fetchSpy = vi.spyOn(global, "fetch").mockResolvedValue(
-        new Response(JSON.stringify({ subscription: { id: 1 } }), {
+        new Response(JSON.stringify({ data: { id: "sub_123" } }), {
           status: 200,
           headers: { "Content-Type": "application/json" },
         }),
@@ -180,7 +184,7 @@ describe("POST /api/subscribe", () => {
 
     it("trims surrounding whitespace before validating the email", async () => {
       fetchSpy = vi.spyOn(global, "fetch").mockResolvedValue(
-        new Response(JSON.stringify({ subscription: { id: 2 } }), {
+        new Response(JSON.stringify({ data: { id: "sub_456" } }), {
           status: 200,
           headers: { "Content-Type": "application/json" },
         }),
@@ -195,9 +199,9 @@ describe("POST /api/subscribe", () => {
       expect(body.ok).toBe(true);
     });
 
-    it("posts to the Kit forms/subscribe endpoint with api_key + email", async () => {
+    it("posts to the Beehiiv subscriptions endpoint with bearer auth and Hokage Scroll metadata", async () => {
       fetchSpy = vi.spyOn(global, "fetch").mockResolvedValue(
-        new Response(JSON.stringify({ subscription: { id: 3 } }), {
+        new Response(JSON.stringify({ data: { id: "sub_789" } }), {
           status: 200,
           headers: { "Content-Type": "application/json" },
         }),
@@ -211,16 +215,39 @@ describe("POST /api/subscribe", () => {
         string,
         RequestInit | undefined,
       ];
-      expect(url).toContain(
-        `https://api.convertkit.com/v3/forms/${TEST_FORM_ID}/subscribe`,
+      expect(url).toBe(
+        `https://api.beehiiv.com/v2/publications/${TEST_PUBLICATION_ID}/subscriptions`,
       );
       expect(init?.method).toBe("POST");
+      expect(init?.headers).toMatchObject({
+        Authorization: `Bearer ${TEST_API_KEY}`,
+        "Content-Type": "application/json",
+      });
       const sentBody = JSON.parse(init?.body as string) as {
-        api_key: string;
         email: string;
+        send_welcome_email: boolean;
+        reactivate_existing: boolean;
+        utm_campaign: string;
+        automation_ids: string[];
+        newsletter_list_ids: string[];
+        custom_fields: Array<{ name: string; value: string }>;
       };
-      expect(sentBody.api_key).toBe(TEST_API_KEY);
       expect(sentBody.email).toBe("user@example.com");
+      expect(sentBody.send_welcome_email).toBe(true);
+      expect(sentBody.reactivate_existing).toBe(true);
+      expect(sentBody.utm_campaign).toBe("hokage_scroll");
+      expect(sentBody.automation_ids).toEqual([TEST_AUTOMATION_ID]);
+      expect(sentBody.newsletter_list_ids).toEqual([
+        TEST_NEWSLETTER_LIST_ID,
+      ]);
+      expect(sentBody.custom_fields).toContainEqual({
+        name: "newsletter",
+        value: "hokage_scroll",
+      });
+      expect(sentBody.custom_fields).toContainEqual({
+        name: "cadence",
+        value: "weekly_sunday_quest_log",
+      });
     });
   });
 });

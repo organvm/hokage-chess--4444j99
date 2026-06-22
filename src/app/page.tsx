@@ -420,19 +420,19 @@ function OfferSection() {
           <div className="bg-gradient-to-b from-hokage-red/20 to-hokage-red/5 border border-hokage-red/40 rounded-sm p-8 text-center flex flex-col">
             <Mail className="w-10 h-10 text-hokage-red mx-auto mb-4" />
             <h3 className="font-heading text-xl font-bold uppercase text-white mb-2">
-              The Escape Plan
+              Hokage Scroll
             </h3>
             <p className="text-hokage-light/60 text-sm mb-6 flex-1">
-              7 positions that expose why you&apos;re stuck at 1300 — and the
-              one-sentence rules that break you through. Free PDF from my own
-              games.
+              The weekly Sunday Quest Log: training-arc recap, featured game,
+              community shout-outs, and the jutsu of the week. Starts with the
+              1300 Escape Plan.
             </p>
             <a
               href="#email-capture"
               className="inline-flex items-center justify-center gap-2 bg-hokage-red text-white font-heading text-sm uppercase tracking-wider px-6 py-3 rounded-sm cta-glow w-full"
             >
               <Mail className="w-4 h-4" />
-              Send Me the Plan
+              Join the Scroll
             </a>
           </div>
 
@@ -575,7 +575,7 @@ function FAQSection() {
     },
     {
       q: "Is there a paid course?",
-      a: "Not yet. Right now everything is free — YouTube content, Discord community, and the resources on this site. When paid products come, the community shapes what they are. Get on the email list to be part of that process.",
+      a: "Not yet. Right now everything is free — YouTube content, Discord community, and the resources on this site. When paid products come, the community shapes what they are. Join Hokage Scroll to be part of that process.",
     },
     {
       q: "What's with the Naruto stuff?",
@@ -666,12 +666,13 @@ function FinalCTASection() {
           Started at{" "}
           <span className="font-mono text-hokage-red">0</span>.
           <br />
-          <span className="text-hokage-red">You&apos;re Already Ahead.</span>
+          <span className="text-hokage-red">Read the Scroll.</span>
         </h2>
 
         <p className="text-lg text-hokage-light/60 mb-10">
-          Get &ldquo;The 1300 Escape Plan&rdquo; free — plus weekly insights
-          from the climb. No spam. Unsubscribe anytime.
+          Get &ldquo;The 1300 Escape Plan&rdquo; free, then one Hokage Scroll
+          every Sunday: recap, featured game, village shout-outs, and jutsu of
+          the week.
         </p>
 
         {state.kind === "success" ? (
@@ -680,10 +681,11 @@ function FinalCTASection() {
             className="max-w-md mx-auto bg-hokage-red/15 border border-hokage-red/40 rounded-sm px-6 py-5 text-white"
           >
             <p className="font-heading text-lg uppercase tracking-wider">
-              Welcome to the Village.
+              You&apos;re on the Hokage Scroll.
             </p>
             <p className="text-sm text-hokage-light/70 mt-2">
-              Check your inbox — &ldquo;The 1300 Escape Plan&rdquo; is on its way.
+              Check your inbox — &ldquo;The 1300 Escape Plan&rdquo; and the next
+              Sunday Quest Log are on their way.
             </p>
           </div>
         ) : (
@@ -706,7 +708,7 @@ function FinalCTASection() {
               disabled={state.kind === "submitting"}
               className="bg-hokage-red text-white font-heading text-sm uppercase tracking-wider px-8 py-4 rounded-sm cta-glow shrink-0 disabled:opacity-60"
             >
-              {state.kind === "submitting" ? "Joining…" : "Join the Village"}
+              {state.kind === "submitting" ? "Joining…" : "Join the Scroll"}
             </button>
           </form>
         )}
@@ -721,7 +723,7 @@ function FinalCTASection() {
         )}
 
         <p className="text-xs text-hokage-light/30 mt-4">
-          Free resources. Weekly insights. No spam. Unsubscribe anytime.
+          Weekly. Chess-only by default. No spam. Unsubscribe anytime.
         </p>
       </div>
     </section>
@@ -749,6 +751,13 @@ function Footer() {
             aria-label="YouTube"
           >
             <YouTube className="w-5 h-5" />
+          </a>
+          <a
+            href="#email-capture"
+            className="hover:text-hokage-red transition-colors"
+            aria-label="Hokage Scroll newsletter"
+          >
+            <Mail className="w-5 h-5" />
           </a>
           <a
             href="#"

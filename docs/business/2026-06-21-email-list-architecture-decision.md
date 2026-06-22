@@ -63,9 +63,9 @@ Rob is the common asset. The database should recognize one person can care about
 
 The bridge pillar is strategically distinctive, but it does not yet have enough recurring output to justify its own newsletter. Making it a third publication creates calendar pressure before the content rhythm exists. The bridge should first prove itself as a series inside the shared base.
 
-### 5. The repo already ships a Kit path
+### 5. The repo ships a portable capture path
 
-The current app has a Kit/ConvertKit subscribe route and setup runbook. Beehiiv remains a valid future newsletter-growth layer, especially for recommendations and boosts, but MP-7 should not force a replatform before the capture loop is live.
+The app keeps one stable `/api/subscribe` contract while the provider adapter can change behind it. CWS-3 moves the active chess adapter to Beehiiv because Hokage Scroll now has a real weekly cadence promise, but MP-7 should still treat tags, segments, and consent as the durable architecture.
 
 The architectural primitive is **portable tags and segments**, not the vendor.
 
@@ -153,21 +153,25 @@ Split into separate publications only if:
 
 ### V1
 
-Use the existing Kit/ConvertKit path for Hokage capture because it is already wired in this repo:
+Use Beehiiv for Hokage capture now that CWS-3 has made the weekly chess newsletter an explicit surface:
 - `src/app/api/subscribe/route.ts`
-- `docs/business/2026-04-29-kit-setup-runbook.md`
+- `docs/business/2026-06-22-hokage-scroll-beehiiv-runbook.md`
+
+The prior Kit/ConvertKit path remains historical context in `docs/business/2026-04-29-kit-setup-runbook.md`, but it is no longer the active Hokage site adapter.
 
 Fitness can keep Teamzy as the operational CRM while mirroring owned-media subscription state into the shared email database when Rob is ready.
 
 ### Beehiiv
 
-Beehiiv remains the preferred evaluation candidate if newsletter-native growth becomes the bottleneck:
+Beehiiv is the active chess-track newsletter platform because CWS-3 specifically requires Hokage Scroll as a weekly owned-distribution surface. Use the platform features in this order:
+- baseline subscription capture,
+- welcome delivery / automation,
 - referral program,
 - recommendations / boosts,
 - newsletter-first analytics,
 - sponsorship surface.
 
-Do not migrate to Beehiiv merely because the world maps mention it. Migrate only when the list has enough cadence and volume for Beehiiv's growth mechanics to matter.
+This is still not permission to split the subscriber architecture. Preserve MP-7's one-ledger rule through fields, lists, segments, and explicit subscriber preferences.
 
 ### Non-negotiable abstraction
 
@@ -189,13 +193,13 @@ Whatever vendor is used, preserve:
 - Keeps Rob's founder graph unified.
 - Creates measurable evidence for MP-3.
 - Avoids launching a third newsletter before the bridge has cadence.
-- Lets the existing Kit implementation ship without waiting on Beehiiv.
+- Lets CWS-3 use Beehiiv without splitting the chess and fitness ledger.
 
 ### Negative
 
 - Requires tag hygiene from day one.
 - Needs clear opt-in copy so subscribers know what they asked for.
-- Does not fully exploit Beehiiv's publication-native model until a later threshold.
+- Requires Beehiiv fields/lists to mirror the canonical MP-7 tags.
 - Creates two editorial promises Rob must eventually sustain.
 
 ---
