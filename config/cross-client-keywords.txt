@@ -1,0 +1,12 @@
+# Cross-client keyword patterns for the {client:rob} scope.
+#
+# Format:
+# - one extended POSIX regex per line
+# - blank lines and lines beginning with # are ignored
+# - matching is case-insensitive
+maddie
+Sovereign Spiral
+sovereign-systems
+elevatealign\.com
+stopdrinkingacid\.com
+eaucohub\.com

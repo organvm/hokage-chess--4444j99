@@ -135,15 +135,15 @@ To ensure that off-repo artifacts (like triaged transcripts in `~/.local/share/<
 
 **Cross-scope schema drift noted:** Maddie scope's auto-memory `feedback_stream_repo_alignment.md` declares conversation transcripts route to `<repo>/docs/archive/YYYY-MM/` (in-repo, git-tracked). This substrate (and the prior 2026-04-29 sort that established it) routes full transcripts to `~/.local/share/<stream>/operational/exports/` (off-repo, gitignored). The Maddie memory was authored after the off-repo convention was established (it references "auto-commit pipeline … observed 2026-04-30"), so the convention divergence is genuine and unresolved. Phase 3 normalization should choose one or formalize a summary-vs-full-transcript split.
 
-## Phase 2 — Pre-commit guard (deferred)
+## Phase 2 — Pre-commit guard (implemented)
 
-Shell script at `.husky/pre-commit` (or extension to existing gitleaks chain) that scans staged files for the cross-client keyword set and rejects unless the file is under `docs/archive/orchestration/` or carries explicit `audiences: [cross_stream_coordination]` frontmatter.
+Shell script at `.husky/pre-commit` that runs `scripts/check-cross-client-bleed.sh` before chaining to any user-global secret scanner. It scans staged additions for the configured cross-client keyword set and rejects unless the file is under `docs/archive/orchestration/` or carries explicit `audiences: [cross_stream_coordination]` frontmatter.
 
-For hokage-chess (reject if other-client keywords appear): `maddie|Maddie|Sovereign Spiral|sovereign-systems|elevatealign\.com|stopdrinkingacid\.com|eaucohub\.com`
+For hokage-chess, the blocked keyword patterns live in `config/cross-client-keywords.txt`. The file is line-based extended POSIX regex: blank lines and `#` comments are ignored, matching is case-insensitive, and `CROSS_CLIENT_KEYWORDS_FILE=/path/to/file` can override it for tests or local experiments.
 
 For sovereign-systems (mirror, inverse): `rob|Bonavoglia|hokage|HokageChess`
 
-Implementation note: a shell script in `.husky/pre-commit`. **Not a LaunchAgent** — on-demand only, per the universal rule.
+Implementation note: this is a shell script in `.husky/pre-commit`. **Not a LaunchAgent** — on-demand only, per the universal rule.
 
 ## Phase 3 — Workspace promotion + schema normalization (deferred)
 
