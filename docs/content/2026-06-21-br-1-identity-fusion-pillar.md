@@ -13,7 +13,7 @@ client_render_mode: tldr
 
 **Date:** 2026-06-21
 **Subject:** BR-1 content pillar specification. The core differentiator of Rob's brand is the combination of chess discipline + iron discipline + faith/family.
-**Status:** Spec defined, awaiting first piece production
+**Status:** First piece produced and published in-app
 **Reference:** GitHub Issue #31
 
 ---
@@ -59,7 +59,19 @@ A Bridge piece proves that **discipline transfers across domains**. It connects 
 - **Frequency:** 1 bridge piece every 2 weeks. (To be initiated after the weekly chess and weekly fitness rhythm is firmly established).
 - **Distribution:** Cross-pollinate tags. Pieces must be tagged across both identities to feed both algorithmic buckets and gradually merge the audiences.
 
-## 4. Connections & Next Steps
+## 4. First Published Piece
+
+The first BR-1 bridge piece is now live inside the deployable app:
+
+- **Piece:** `Progressive Overload on the Board`
+- **Route:** `/bridge/progressive-overload-on-the-board`
+- **Production packet:** `docs/content/2026-06-22-progressive-overload-on-the-board.md`
+- **Cross-identity tags:** `#HokageChess`, `#LegionOfFitness`, `#ChessDiscipline`, `#IronDiscipline`, `#FaithFamily`, `#RoadTo1500`
+- **Formats ready:** YouTube script skeleton, carousel copy, newsletter block
+
+This satisfies the repo-side BR-1 launch condition: the first bridge piece exists in the public app, is discoverable from the homepage, and carries both identity tag sets. External posting remains Rob-owned because it requires platform account access.
+
+## 5. Connections & Next Steps
 
 - **BR-2 Connection:** This pillar is directly tied to **BR-2** (canonical thesis essay "Discipline transfers across domains"). BR-2 acts as the foundational manifesto that this pillar draws from.
-- **Acceptance Criteria for BR-1:** The first bridge piece is published and tagged across both identities.
+- **Acceptance Criteria for BR-1:** The first bridge piece is published in the app and tagged across both identities. Next operational step: Rob cross-posts the prepared cuts from the Hokage and Legion platform accounts.
