@@ -13,7 +13,7 @@ client_render_mode: tldr
 
 **Date:** 2026-06-21
 **Subject:** BR-1 content pillar specification. The core differentiator of Rob's brand is the combination of chess discipline + iron discipline + faith/family.
-**Status:** Spec defined, awaiting first piece production
+**Status:** Spec defined; first bridge piece produced — "The Fourth Hour" (`2026-06-21-br-1-bridge-piece-01-the-fourth-hour.md`), ready to ship across both identities
 **Reference:** GitHub Issue #31
 
 ---
@@ -62,4 +62,6 @@ A Bridge piece proves that **discipline transfers across domains**. It connects 
 ## 4. Connections & Next Steps
 
 - **BR-2 Connection:** This pillar is directly tied to **BR-2** (canonical thesis essay "Discipline transfers across domains"). BR-2 acts as the foundational manifesto that this pillar draws from.
-- **Acceptance Criteria for BR-1:** The first bridge piece is published and tagged across both identities.
+- **First piece produced:** **"The Fourth Hour"** (`2026-06-21-br-1-bridge-piece-01-the-fourth-hour.md`) — the CNS-tax concept, executed across long-form video, IG carousel, and Beehiiv newsletter, with cross-identity tagging defined for every surface. Serves as the first proof-by-demonstration ahead of the BR-2 essay.
+- **Acceptance Criteria for BR-1:** The first bridge piece is published and tagged across both identities. ✅ Content artifact + cross-identity tagging spec complete (see bridge-piece-01); remaining step is the publish action (Rob records/posts).
+- **Next pieces (cadence — 1 every 2 weeks, Saturdays):** 02 *Progressive Overload on the Board*; 03 *Endgame & The Bulk*.
