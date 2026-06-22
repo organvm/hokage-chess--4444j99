@@ -181,7 +181,7 @@ to dated versions before syncing.
 | V4 | PDE skill not built | Group 3 | OPEN — out of scope for Stream D execution |
 | V5 | MEMORY.md missing entries | — | FIXED |
 | V6 | Domain not registered | Group 1+4 | OPEN — user action (financial transaction) |
-| V7 | No email funnel | Group 1+4 | IN PROGRESS — form handler wiring + Kit setup runbook (Phase 4) |
+| V7 | No email funnel | Group 1+4 | DONE 2026-06-21 (commit `c253df8`) |
 | V8 | Landing page not deployed | Group 1 | IN PROGRESS — OG asset + mobile QA + Vercel preflight doc (Phase 3); deploy gated on user auth |
 | V9 | 54 plans unsynced to chezmoi | Group 5 | OPEN — out of scope for Stream D execution |
 | V10 | IRF not updated | Group 2 | IN PROGRESS — Stream H Reconciliation Gate at session close |
