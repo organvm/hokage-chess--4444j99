@@ -15,7 +15,7 @@ export interface GrowthTarget {
 }
 
 export interface RevenueStream {
-  source: "ads" | "kofi" | "coaching" | "sponsorship" | "memberships";
+  source: "ads" | "kofi" | "coaching" | "sponsorship" | "memberships" | "cohort_challenge";
   monthly_amount: number;
   active: boolean;
 }
