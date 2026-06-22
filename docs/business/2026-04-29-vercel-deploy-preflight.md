@@ -46,13 +46,11 @@ Stage these AHEAD of first deploy, scoped to **Production** + **Preview**:
 
 | Name | Value source | Required for | Notes |
 |---|---|---|---|
-| `BEEHIIV_API_KEY` | Beehiiv workspace → Settings → API | CWS-3 Hokage Scroll form handler | Server-side only; do NOT prefix `NEXT_PUBLIC_`. See `docs/business/2026-06-22-hokage-scroll-beehiiv-runbook.md`. |
-| `BEEHIIV_PUBLICATION_ID` | Beehiiv publication settings/API response | CWS-3 Hokage Scroll form handler | Server-side route config. Should look like `pub_...`. |
-| `BEEHIIV_AUTOMATION_ID` | Beehiiv automation with Add by API trigger | Optional welcome delivery | Optional. Use only after automation is active. |
-| `BEEHIIV_NEWSLETTER_LIST_ID` | Beehiiv newsletter list | Optional Hokage Scroll list membership | Optional. Use only if the publication has lists enabled. |
+| `KIT_API_KEY` | kit.com → Account Settings → API Keys | Phase 4 form handler (V7) | Server-side only; do NOT prefix `NEXT_PUBLIC_`. Pending user setup per `docs/business/2026-04-29-kit-setup-runbook.md` (Phase 4.2). |
+| `NEXT_PUBLIC_KIT_FORM_ID` | kit.com → Forms → [your form] → Settings | Phase 4 form handler (V7) | Public client-side; safe to expose. |
 | `NEXT_PUBLIC_SITE_URL` | `https://hokagechess.com` (or fallback) | OG canonical URLs | Already hardcoded in `layout.tsx metadataBase`; env var optional. |
 
-**Currently no env vars are required for a successful build** — the form handler returns `config_incomplete` at runtime if Beehiiv credentials are absent. The deploy can ship with form-capture as visual-only until Beehiiv credentials land.
+**Currently no env vars are required for a successful first deploy** — the form handler falls back to `console.log` if env vars are absent (Phase 4.1 wiring). The deploy can ship with form-capture as visual-only until Kit credentials land.
 
 ---
 
@@ -121,7 +119,7 @@ Once a preview URL is live:
 | Twitter card | https://cards-dev.twitter.com/validator (deprecated; use opengraph.xyz) | Twitter image preview shows brand card |
 | Mobile responsive | DevTools device-toolbar at 375×667 | All 4 watch-items from mobile QA notes look acceptable |
 | Lighthouse (mobile) | Chrome DevTools → Lighthouse → Mobile | Performance >85, A11y >95, SEO >95 (perfect not required) |
-| Form submission | Fill email field → submit | Success card appears when Beehiiv env vars are set; otherwise the UI shows the "launching soon" config fallback |
+| Form submission | Fill email field → submit | Browser console shows `Email submitted: <value>` (Phase 4.1 fallback when KIT_API_KEY absent) |
 | Persona routes | `/for/stuck-beginner`, `/for/climbing-intermediate`, `/for/returning-adult-improver` | Each renders without 404 |
 | favicon | Tab icon in browser | Favicon visible |
 | Discord link | Click Discord icon in footer | Currently `href="#"` — placeholder until Discord provisioned (Rob blocker) |
@@ -130,7 +128,7 @@ Once a preview URL is live:
 
 ## What this preflight does NOT cover (out of scope for Stream D)
 
-- **Beehiiv account setup itself** — see `docs/business/2026-06-22-hokage-scroll-beehiiv-runbook.md` (CWS-3)
+- **Kit (ConvertKit) account setup itself** — see `docs/business/2026-04-29-kit-setup-runbook.md` (Phase 4.2)
 - **Domain purchase** — user financial decision; Cloudflare or Vercel both viable
 - **Discord server provisioning** — Rob blocker per memory `project_artifact_rob_trail_2026_04_27.md`
 - **Analytics setup** — Plausible / Vercel Analytics / GA4 — separate decision; ship without first, add post-launch
