@@ -40,9 +40,11 @@ rules:
     decision: ABSORB
     from: BODI naming-convention discipline
     reason: >
-      Genin/Chunin/Jonin serves dual purpose — Discord role tiers in Phase 1,
-      paid product tiers (Genin Squad $9/Chunin Dojo $29/Jonin Mentorship $99) in Phase 2.
-      Same vocabulary across surfaces reduces cognitive load for the audience.
+      Genin/Chunin/Jonin serves dual purpose across Discord identity and commerce:
+      free rating roles in The Village, Chunin Exams as the ChessDojo-style paid
+      training lane, and Jonin Mentorship as the planned $150/mo high-touch service.
+      Same vocabulary across surfaces reduces cognitive load for the audience, while
+      paid entitlement roles avoid confusing rank identity with purchase status.
 
   - id: AR-005
     source: content-strategy-heuristics (title-CTR-auditing, emotion-stakes-first formula)

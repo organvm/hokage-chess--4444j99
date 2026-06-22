@@ -7,6 +7,8 @@
 **Status:** v1 ritual specs, ready to deploy on Discord setup
 **IRF:** PRT-041 (DONE on commit)
 
+**Current taxonomy note (2026-06-22):** This document remains canonical for weekly cadence and ritual scripts. For current Discord role/channel taxonomy, the ChessDojo-style paid tier, and the planned $150/mo mentorship lane, use `docs/content/2026-06-22-cws-2-discord-hidden-leaf-village.md`.
+
 ---
 
 ## 1. Why rituals?
@@ -25,7 +27,7 @@ This mirrors BODI's Teamzy warmth-cadence: regular, predictable, parasocial-but-
 
 ---
 
-## 2. Discord channel structure (v1)
+## 2. Discord channel structure (legacy v1)
 
 ```
 HOKAGE CHESS DISCORD
@@ -236,7 +238,7 @@ WED 7pm    Welcome Wednesday again — and so on
 
 ---
 
-## 7. Tier-gated channel rituals (Genin / Chunin / Jonin)
+## 7. Tier-gated channel rituals (legacy v1)
 
 Beyond the public rituals, each paid tier has its own gated ritual:
 

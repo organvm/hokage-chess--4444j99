@@ -8,10 +8,11 @@ This layer elaborates on actors, ELO-banded tiers, content surfaces, and named f
 
 - **Creator:** Rob Bonavoglia (`@HokageChess`), NYC, ~1350 ELO authentic-climb authority
 - **Audience tiers (rating-banded, Naruto-stack):**
-  - **Genin** (0–1199 ELO) — newcomers, largest tier, future $9/mo Genin Squad
-  - **Chunin** (1200–1599 ELO) — current core, Rob's tribe, future $29/mo Chunin Dojo
-  - **Jonin** (1600+ ELO) — peers and mentors, future $99/mo Jonin Mentorship
-- **Content surfaces:** YouTube long-form, YouTube Shorts (daily puzzle), Discord ("The Village"), Kit newsletter ("The Scroll"), `hokagechess.com` landing
+  - **Genin** (0–1199 ELO) — newcomers, largest tier, free Discord identity role
+  - **Chunin** (1200–1599 ELO) — current core, Rob's tribe, free Discord identity role
+  - **Jonin** (1600+ ELO) — peers and mentors, free Discord identity role; not automatically a coaching role
+- **Paid community entitlements:** Chunin Exams (ChessDojo-style paid training tier, target $15/mo or $100/yr); Jonin Mentorship (planned $150/mo high-touch service)
+- **Content surfaces:** YouTube long-form, YouTube Shorts (daily puzzle), Discord ("The Village" / Hidden Leaf Village structure), Kit newsletter ("The Scroll"), `hokagechess.com` landing
 - **Named formats:** Jutsu of the Week (Tuesday cadence, single-technique), Boss Battle (monthly, opponent-encounter; Park / Online / Title / Echo variants)
 - **Lead-magnet asset:** "The 1300 Escape Plan" — 7-position breakdown of typical 1300-instinct mistakes
 - **Flagship series:** Road to 1500 (long-running climb documentary)
@@ -19,8 +20,9 @@ This layer elaborates on actors, ELO-banded tiers, content surfaces, and named f
 ## Sources
 
 - `../../../ROB-FIRST-30-DAYS.md` — Genin/Chunin/Jonin tier definitions, named formats, Discord / Kit / lead-magnet entities
-- `../../business/2026-04-25-hokage-4-level-funnel-architecture.md` — L1→L4 entities and the Naruto-stack pricing tiers
-- `../../business/2026-04-25-strategy-v6-master.md` — channel-health diagnosis, hook-first format, founder-asset position
+- `../../../content/2026-06-22-cws-2-discord-hidden-leaf-village.md` — current Discord role/channel taxonomy and paid-tier boundaries
+- `../../../business/2026-04-25-hokage-4-level-funnel-architecture.md` — L1→L4 entities and the Naruto-stack pricing tiers
+- `../../../business/2026-04-25-strategy-v6-master.md` — channel-health diagnosis, hook-first format, founder-asset position
 
 ## TBD *(last swept 2026-06-01)*
 
@@ -30,4 +32,3 @@ This layer elaborates on actors, ELO-banded tiers, content surfaces, and named f
   - *Sweep note: current position (LOW risk for channel/community use; $500–$1,500 clearance needed for Phase-2 merch) is documented in `02-lineage/README.md`. No disambiguation needed until Rob approves Phase-2 budget. Cross-link: once `02-lineage/milestones.yaml` exists, add a pointer here.*
 - Add a relations sub-doc when more than two formats interact (e.g., "Jutsu of the Week" episode → "Sparring Partners" Discord channel → Kit broadcast follow-up)
   - *Sweep note: deferred — premature until Jutsu-of-the-Week → Discord → Kit broadcast chain is operational. Revisit after Week 4 of Phase 1.*
-
