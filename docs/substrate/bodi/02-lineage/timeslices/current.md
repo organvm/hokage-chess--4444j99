@@ -14,13 +14,13 @@
 
 ## Corporate & Market Context (2026)
 
-- **BODi Transformation:** The parent company has completed its pivot to "Health Esteem," moving from digital subscriptions to a diversified omnichannel model (retail, nutrition lines like P90X).
-- **Affiliate Baseline:** With the 2024 end of the MLM "Coach" network, Rob operates in a performance-based affiliate ecosystem. This requires a shift from "recruiting" to "referring through authority."
-- **Social Commerce Dominance:** 33% of e-commerce is now driven by social commerce. The market expects **Live Shopping** and **Creator-Led Selling** rather than simple DMs.
+- **BODi Transformation:** The parent company eliminated the MLM "Coach" network in late 2024, shifting fully to an omnichannel affiliate model (retail, nutrition lines like P90X). This reduces infrastructure costs and lowers the revenue break-even point significantly (by over $400 million).
+- **Affiliate Baseline:** With the MLM model gone, Rob operates in a pure performance-based affiliate ecosystem. This requires a shift from "recruiting a downline" to "referring through authority."
+- **Social Commerce Dominance:** By 2026, global shoppers are projected to spend $1.05 trillion on social media commerce. In the U.S., social commerce represents nearly 8% of e-commerce. The market expects **Live Shopping** and **Creator-Led Selling** over manual outbound DMs.
 
 ## Primary Current Constraint
 
-Rob explicitly identifies **L1 prospecting** as the place he spends the most time. The funnel works, but the top is manually expensive. He is a high-volume salesperson in a market that has shifted toward buyer-led trust engines.
+Rob explicitly identifies **L1 prospecting** as the place he spends the most time. The funnel works, but the top is manually expensive. He is a high-volume salesperson in a market that has shifted toward buyer-led trust engines, yet his primary lead generation relies on outbound effort rather than inbound social commerce.
 
 ## Current Strengths
 
@@ -32,5 +32,9 @@ Rob explicitly identifies **L1 prospecting** as the place he spends the most tim
 
 - **Manual Scalability:** Prospecting speed is limited by Rob's personal bandwidth.
 - **Content-Funnel Gap:** Reels are disconnected from the lead capture machinery.
-- **Rented Land Risk:** Heavy reliance on IG/FB scraping without a primary "Owned Media" surface (e.g., blog or newsletter).
+- **Rented Land Risk:** Heavy reliance on IG/FB scraping without a primary "Owned Media" surface (e.g., blog or newsletter), exposing the business to sudden algorithm shifts that can cut reach drastically.
 
+### Sources
+- [SEC Filing Form 8-K, The Beachbody Company (BODi), Oct 2024](https://www.sec.gov/Archives/edgar/data/1826889/000119312524229116/d822185dex991.htm)
+- [Capital One Shopping Research: Social Commerce Statistics & Trends (2026)](https://capitaloneshopping.com/research/social-media-shopping-statistics/)
+- [Digital Reach Solutions: Owned vs Rented Audience Platform (2026)](https://digitalreachsolutions.com/owned-vs-rented-audience-platform-where-to-build/)
