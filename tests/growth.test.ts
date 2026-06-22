@@ -8,7 +8,7 @@ import {
   checkYPPEligibility,
   QUARTERLY_TARGETS,
 } from "../src/lib/growth";
-import type { GrowthSnapshot, RevenueStream } from "../src/lib/growth";
+import type { GrowthPhase, GrowthSnapshot, RevenueStream } from "../src/lib/growth";
 
 describe("determinePhase", () => {
   it("should return q1_setup for low subscribers", () => {
@@ -39,7 +39,7 @@ describe("getTarget", () => {
   });
 
   it("should throw for unknown phase", () => {
-    expect(() => getTarget("q5_unknown" as any)).toThrow("Unknown phase");
+    expect(() => getTarget("q5_unknown" as GrowthPhase)).toThrow("Unknown phase");
   });
 });
 
