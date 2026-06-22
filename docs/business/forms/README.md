@@ -22,7 +22,6 @@
 | 09 | [Domain lexicon extension](09-domain-lexicon-extension.md) | Anthony or any operator | 10-20 min | Scoring engine specialized to a new domain without forking |
 | 10 | [Magnetism measurement card](10-magnetism-measurement-card.md) | Anthony (weekly) | 10 min | Rhetorical magnetism formula → measured signal |
 | 11 | [Wearable affiliate selection](11-wearable-affiliate-selection.md) | Rob | 10 min | Wearable affiliate integration across content stack |
-| 12 | [Public ritual selection](12-public-ritual-selection.md) | Rob | 5 min | Bridge content event anchor, BR-3 fulfillment |
 
 ---
 

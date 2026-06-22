@@ -6,13 +6,11 @@ import {
   createUploadChecklist,
   planWeek,
   SHORT_FORMAT,
-  validateShortsSpec,
 } from "../src/lib/content-strategy";
 import type {
   VideoIdea,
   ThumbnailScore,
   ContentLexicon,
-  ShortsSpec,
 } from "../src/lib/content-strategy";
 
 describe("scoreTitleFormula", () => {
@@ -198,81 +196,6 @@ describe("ContentLexicon parametrization", () => {
 describe("SHORT_FORMAT constant", () => {
   it("is the literal scheduler treats specially", () => {
     expect(SHORT_FORMAT).toBe("short");
-  });
-});
-
-describe("validateShortsSpec", () => {
-  it("should validate a correct ShortsSpec", () => {
-    const spec: ShortsSpec = {
-      format: "short",
-      duration_seconds: 45,
-      core_tactic: "discovered attack",
-      hokage_framing: "jutsu",
-    };
-    const result = validateShortsSpec(spec);
-    expect(result.valid).toBe(true);
-    expect(result.errors).toHaveLength(0);
-  });
-
-  it("should invalidate duration less than 30s", () => {
-    const spec: ShortsSpec = {
-      format: "short",
-      duration_seconds: 20,
-      core_tactic: "discovered attack",
-      hokage_framing: "jutsu",
-    };
-    const result = validateShortsSpec(spec);
-    expect(result.valid).toBe(false);
-    expect(result.errors).toContain("duration must be between 30 and 60 seconds");
-  });
-
-  it("should invalidate duration greater than 60s", () => {
-    const spec: ShortsSpec = {
-      format: "short",
-      duration_seconds: 65,
-      core_tactic: "discovered attack",
-      hokage_framing: "jutsu",
-    };
-    const result = validateShortsSpec(spec);
-    expect(result.valid).toBe(false);
-    expect(result.errors).toContain("duration must be between 30 and 60 seconds");
-  });
-
-  it("should invalidate missing core_tactic", () => {
-    const spec: ShortsSpec = {
-      format: "short",
-      duration_seconds: 45,
-      core_tactic: "",
-      hokage_framing: "jutsu",
-    };
-    const result = validateShortsSpec(spec);
-    expect(result.valid).toBe(false);
-    expect(result.errors).toContain("core_tactic must be provided");
-  });
-
-  it("should invalidate missing hokage_framing", () => {
-    const spec: ShortsSpec = {
-      format: "short",
-      duration_seconds: 45,
-      core_tactic: "discovered attack",
-      hokage_framing: "   ",
-    };
-    const result = validateShortsSpec(spec);
-    expect(result.valid).toBe(false);
-    expect(result.errors).toContain("hokage_framing must be provided");
-  });
-
-  it("should invalidate incorrect format string", () => {
-    // We cast to any to bypass TS for the test
-    const spec: any = {
-      format: "long",
-      duration_seconds: 45,
-      core_tactic: "discovered attack",
-      hokage_framing: "jutsu",
-    };
-    const result = validateShortsSpec(spec);
-    expect(result.valid).toBe(false);
-    expect(result.errors).toContain("format must be 'short'");
   });
 });
 

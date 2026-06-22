@@ -41,33 +41,6 @@ export interface ThumbnailScore {
   max_score: number;
 }
 
-export interface ShortsSpec {
-  format: typeof SHORT_FORMAT;
-  duration_seconds: number;
-  core_tactic: string;
-  hokage_framing: string;
-}
-
-export function validateShortsSpec(spec: ShortsSpec): {
-  valid: boolean;
-  errors: string[];
-} {
-  const errors: string[] = [];
-  if (spec.format !== SHORT_FORMAT) {
-    errors.push("format must be 'short'");
-  }
-  if (spec.duration_seconds < 30 || spec.duration_seconds > 60) {
-    errors.push("duration must be between 30 and 60 seconds");
-  }
-  if (!spec.core_tactic || spec.core_tactic.trim() === "") {
-    errors.push("core_tactic must be provided");
-  }
-  if (!spec.hokage_framing || spec.hokage_framing.trim() === "") {
-    errors.push("hokage_framing must be provided");
-  }
-  return { valid: errors.length === 0, errors };
-}
-
 export interface UploadChecklist {
   thumbnail_pass: boolean;
   title_pass: boolean;
