@@ -35,9 +35,9 @@
 | RB-6 | Discord server provisioning (~80 min/wk owned by Rob) | PRT-041 | P1 |
 | RB-7 | Episode 1 green-light + first opponent/jutsu pick | PRT-040 | P1 |
 | RB-8 | Canonical Facebook Page + Instagram handles | persona open threads | P1 |
-| RB-9 | Teamzy CRM field schema (`docs/business/teamzy-schema-2026-04.md`; Rob-specific custom fields still need verification) | PRT-043, persona open threads | P1 |
+| RB-9 | Teamzy CRM field schema | PRT-043, persona open threads | P1 |
 | RB-10 | hokagechess.com domain registration via Cloudflare (~5min) | PRT-027 | P0 |
-| RB-11 | BODI Reformation Spec — read + accept/reject avatar premise | reformation spec (e86777f); response: `2026-06-22-rb-11-bodi-reformation-response.md` | P0 |
+| RB-11 | BODI Reformation Spec — read + accept/reject avatar premise | reformation spec (e86777f) | P0 |
 
 ## B. Agent Fixes (system debt) — `agent-fix`
 
@@ -69,7 +69,7 @@
 | FWS-2 | Skool/Whop paid community gate (Legion of Fitness migration) | fitness world map §7.2 | P1 |
 | FWS-3 | Owned digital product (Legion Bulk Protocol) [docs/business/2026-06-21-fws-3-owned-digital-product.md] | fitness world map §7.3 | DONE |
 | FWS-4 | Long-form authority surface (YouTube long-form OR podcast) | fitness world map §7.4 | P2 |
-| FWS-5 | Coaching software backend (TrueCoach $26/mo for 5 clients) [docs/business/2026-06-22-fws-5-coaching-software-backend.md] | fitness world map §7.5 | DONE |
+| FWS-5 | Coaching software backend (TrueCoach $26/mo for 5 clients) | fitness world map §7.5 | P2 |
 | FWS-6 | Wearable affiliate stack (Whoop/Oura/Element/AG1) → Form 11 | fitness world map §7.10 | P2 |
 | FWS-7 | Owned domain at fitness identity (`robbonavoglia.com`) [docs/business/2026-06-21-fws-7-owned-domain.md] | fitness world map §7.7 | DONE |
 
@@ -87,7 +87,7 @@
 |---|---|---|
 | MP-1 | Pillar architecture taxonomy doc (Chess / Fitness / Bridge — what's shared, what's separate) | No top-level map ties the two worlds together |
 | MP-2 | Cross-pillar content rhythm spec (when chess content vs. fitness vs. bridge) | No production cadence exists |
-| MP-3 | Audience overlap analysis [docs/business/2026-06-22-audience-overlap-analysis.md] | DONE at strategy-system level; live survey/analytics remain Rob-owned |
+| MP-3 | Audience overlap analysis — survey/data on whether chess viewers care about fitness | Unknown; affects whether to merge or separate channels |
 | MP-4 | Avatar archetype canonical doc (Hokage underdog + dual-discipline persona) | Implied across docs, never formally specified |
 | MP-5 | BODI exit transition messaging plan (how Rob announces without burning bridges) | Reformation spec says exit; doesn't say HOW to communicate it |
 | MP-6 | Legion of Fitness FB group migration plan (rebrand? wind down? Hokage Legion?) | Asset exists; future is undecided |
@@ -124,7 +124,7 @@ RB-3 (75-person list) ─→ PRT-046 master file
 RB-10 (domain)        ─→ PRT-028 (Vercel deploy)
 
 MP-1 (pillar taxonomy) ─→ MP-2, MP-7
-MP-3 (audience overlap) ─→ MP-7 decision (resolved as conservative two-track + bridge segment)
+MP-3 (audience overlap) ─→ MP-7 decision
 MP-10 (time budget)    ─→ everything else's feasibility
 ```
 
@@ -185,7 +185,7 @@ All 43 atoms now tracked as issues in `4444J99/hokage-chess`:
 | FWS-2 | #25 | whitespace-fitness, P1 |
 | FWS-3 | #26 | DONE |
 | FWS-4 | #27 | whitespace-fitness, P2 |
-| FWS-5 | #28 | DONE |
+| FWS-5 | #28 | whitespace-fitness, P2 |
 | FWS-6 | #29 | whitespace-fitness, P2 |
 | FWS-7 | #30 | DONE |
 | BR-1 | #31 | bridge-content, P0 |

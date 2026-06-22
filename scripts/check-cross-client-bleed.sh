@@ -12,12 +12,6 @@ KEYWORDS_REGEX='(maddie|Maddie|Sovereign Spiral|sovereign-systems|elevatealign\.
 # audit logs, this guard's own implementation).
 WHITELIST_REGEX='^(docs/governance/client-separation-substrate\.md|docs/governance/CANONICAL-HOME-ANCHOR\.md|scripts/check-cross-client-bleed\.sh|HANDOFF\.md|\.conductor/active-handoff\.md|docs/archive/.*|\.claude/plans/.*)$'
 
-CONFIG_FILE="${CROSS_CLIENT_KEYWORDS_FILE:-config/cross-client-keywords.txt}"
-
-if [[ -f "$CONFIG_FILE" ]]; then
-  KEYWORDS_REGEX=$(grep -v '^#' "$CONFIG_FILE" | grep -v '^[[:space:]]*$' | tr '\n' '|' | sed 's/|$//')
-fi
-
 # Get staged files (not yet committed)
 staged_files=$(git diff --cached --name-only --diff-filter=ACMR)
 
@@ -33,13 +27,6 @@ while IFS= read -r file; do
   if [[ "$file" =~ $WHITELIST_REGEX ]]; then
     continue
   fi
-  
-  # Check for frontmatter whitelist
-  full_content=$(git show ":$file" 2>/dev/null || cat "$file")
-  if echo "$full_content" | grep -E -q '^audiences:[[:space:]]*\[.*cross_stream_coordination.*\]'; then
-    continue
-  fi
-
   # Get the staged content of this file (additions only, excluding diff header markers).
   # `+` is a regex metachar in BSD basic regex, so we use bracket-class literals
   # to keep the pattern portable across BSD grep (macOS default) and GNU grep.

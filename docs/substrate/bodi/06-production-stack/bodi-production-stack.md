@@ -31,20 +31,9 @@
 - **VIP LTV:** Retention duration in months.
 - **Ambassador Velocity:** Number of new duplication-ready partners/month.
 
-## Teamzy Schema Register
-
-Canonical register: `docs/business/teamzy-schema-2026-04.md`
-
-Current state:
-- Known Teamzy field surface is documented from repository artifacts and Teamzy public help docs.
-- Rob-specific custom fields remain unverified because no Teamzy screenshot, CSV header export, or custom-field list is present in the repository.
-- Proposed additions are recorded with collision rules before Teamzy changes are made.
-
-Proposed fields to verify/create:
-- `source_content_id`
-- `wearable_user`
-- `owned_media_subscriber`
-- `ambassador_readiness`
-- `content_pack_delivered_at`
-- `content_pack_engagement`
-- `live_qa_attended`
+## Provisional Teamzy Field Spec (Blocked-Awaiting-Collaborator)
+The following fields are proposed for Teamzy to track content effectiveness:
+- `Source_Content_ID` (which reel brought them in)
+- `Wearable_User` (Boolean: Yes/No)
+- `Owned_Media_Subscriber` (Boolean: Yes/No)
+- `Ambassador_Readiness` (Scale 1-10)
