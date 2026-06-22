@@ -37,7 +37,7 @@
 | RB-8 | Canonical Facebook Page + Instagram handles | persona open threads | P1 |
 | RB-9 | Teamzy CRM field schema | PRT-043, persona open threads | P1 |
 | RB-10 | hokagechess.com domain registration via Cloudflare (~5min) | PRT-027 | P0 |
-| RB-11 | BODI Reformation Spec — read + accept/reject avatar premise | reformation spec (e86777f) | P0 |
+| RB-11 | BODI Reformation Spec — read + accept/reject avatar premise | reformation spec (e86777f); response: `2026-06-22-rb-11-bodi-reformation-response.md` | P0 |
 
 ## B. Agent Fixes (system debt) — `agent-fix`
 
