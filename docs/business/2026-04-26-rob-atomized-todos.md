@@ -88,7 +88,7 @@
 | MP-1 | Pillar architecture taxonomy doc (Chess / Fitness / Bridge — what's shared, what's separate) | No top-level map ties the two worlds together |
 | MP-2 | Cross-pillar content rhythm spec (when chess content vs. fitness vs. bridge) | No production cadence exists |
 | MP-3 | Audience overlap analysis — survey/data on whether chess viewers care about fitness | Unknown; affects whether to merge or separate channels |
-| MP-4 | Avatar archetype canonical doc (Hokage underdog + dual-discipline persona) | Implied across docs, never formally specified |
+| MP-4 | Avatar archetype canonical doc (Hokage underdog + dual-discipline persona) | DONE [docs/business/2026-04-26-avatar-archetype.md] |
 | MP-5 | BODI exit transition messaging plan [DONE] [docs/business/2026-06-23-mp-5-bodi-exit-messaging-plan.md] | Reformation spec says exit; doesn't say HOW to communicate it |
 | MP-6 | Legion of Fitness FB group migration plan (rebrand? wind down? Hokage Legion?) | Asset exists; future is undecided |
 | MP-7 | Email list architecture decision [DONE] | Resolved via unified base, two tracks |
@@ -194,7 +194,7 @@ All 43 atoms now tracked as issues in `4444J99/hokage-chess`:
 | MP-1 | #34 | missing-piece, P0 |
 | MP-2 | #35 | missing-piece, P1 |
 | MP-3 | #36 | missing-piece, P1 |
-| MP-4 | #37 | missing-piece, P1 |
+| MP-4 | #37 | DONE |
 | MP-5 | #38 | DONE |
 | MP-6 | #39 | missing-piece, P1 |
 | MP-7 | #40 | missing-piece, P1 |
