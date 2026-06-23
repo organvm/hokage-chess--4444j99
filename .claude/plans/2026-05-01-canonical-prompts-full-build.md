@@ -238,7 +238,7 @@ These were considered but excluded by the chosen scope (Option A) or by repo-loc
 - V-C #49 (conductor MCP scope binding) — workspace-level, breaks repo-lock
 - V-D #50 (Maddie-side substrate parallel) — outside repo
 - V-E #51 (cross-scope conventions reconciliation) — workspace-level
-- V-F #52 (chezmoi mirror) — touches `~/.local/share/` + chezmoi source, not worktree-able
+- V-F #52 (chezmoi mirror) — touches `~/.local/share/` + chezmoi source, not worktree-able · ✓ DONE 
 - AF-1..5 — meta-organvm parity work, breaks repo-lock
 - RB-1..11 / CWS-x / FWS-x / BR-x / MP-x — Rob's actions / strategic docs / content (not codable)
 - B.3 Discord bot, Character Sheet Canva template — external services
