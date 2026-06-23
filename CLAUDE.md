@@ -110,7 +110,7 @@ Gitleaks runs on every commit. It is aggressive about literal credential-keyword
 2. Or add `// allow-secret` / `# allow-secret` to the line (per gitleaks config)
 3. Or, for transcripts unsafe to ever commit, route to `~/.local/share/hokage-chess/operational/exports/` (per the client-separation substrate's R1 routing) and gitignore the repo-root path
 
-The repo `.gitignore` already catches three orphan-transcript patterns at root: `Untitled-*.md`, `export-*.md`, `session-ses_*.md` (intentional safety nets from prior bleed events). Files matching these are off-tree by design — if you produce one, triage per substrate R1 to the appropriate `~/.local/share/<stream>/operational/exports/` rather than `git add`-ing it. The off-repo durable trees survive macOS temp-purge but their remote-parity gap is tracked in `HANDOFF.md` (vacuum V-F).
+The repo `.gitignore` already catches three orphan-transcript patterns at root: `Untitled-*.md`, `export-*.md`, `session-ses_*.md` (intentional safety nets from prior bleed events). Files matching these are off-tree by design — if you produce one, triage per substrate R1 to the appropriate `~/.local/share/<stream>/operational/exports/` rather than `git add`-ing it. The off-repo durable trees survive macOS temp-purge (chezmoi mirror established to close vacuum V-F).
 
 Never bypass with `--no-verify`. The pre-commit hook is the source of truth; if a hook fails legitimately, fix the root cause.
 
