@@ -21,7 +21,7 @@ This file tracks two distinct vacuum namespaces from different originating sessi
 | V-A | [#47](https://github.com/4444J99/hokage-chess/issues/47) | P1 | Phase 2 pre-commit guard (cross-client keyword bleed) — ✓ PR #61 merged 2026-05-02 (`c02797d`) |
 | V-B | [#48](https://github.com/4444J99/hokage-chess/issues/48) | P2 | Phase 3 canonical-home promotion + seed.yaml schema normalization — ⊘ partial: PR #54 merged 2026-05-02 (`ad7ced8`) lands the anchor + `dual_purpose` flag; cross-repo migration to `meta-organvm/governance/` still deferred |
 | V-C | [#49](https://github.com/4444J99/hokage-chess/issues/49) | P2 | Phase 4 conductor MCP scope-binding |
-| V-D | [#50](https://github.com/4444J99/hokage-chess/issues/50) | P1 | Maddie-side parallel substrate (tracking proxy — actual work on Maddie repo) |
+| V-D | [#50](https://github.com/4444J99/hokage-chess/issues/50) | P1 | Maddie-side parallel substrate (tracking proxy) — patch packet in [`docs/archive/orchestration/2026-06-22-maddie-client-separation-substrate-patch.md`](docs/archive/orchestration/2026-06-22-maddie-client-separation-substrate-patch.md) |
 | V-E | [#51](https://github.com/4444J99/hokage-chess/issues/51) | P2 | Cross-scope conventions reconciliation (transcript-routing drift) |
 | V-F | [#52](https://github.com/4444J99/hokage-chess/issues/52) | P1 | Chezmoi mirror of `~/.local/share/hokage-chess/operational/` |
 
@@ -252,7 +252,7 @@ User-pasted Maddie-intent session-export ("Editing flow: vacuum gate, quiz copy,
 - V-A → [#47](https://github.com/4444J99/hokage-chess/issues/47) — Phase 2 pre-commit guard (cross-client keyword bleed) · ✓ PR #61 merged 2026-05-02 (`c02797d`)
 - V-B → [#48](https://github.com/4444J99/hokage-chess/issues/48) — Phase 3 substrate-doc canonical-home promotion + seed.yaml schema normalization · ⊘ PR #54 merged 2026-05-02 (`ad7ced8`) — partial: anchor + `dual_purpose` only; cross-repo migration deferred
 - V-C → [#49](https://github.com/4444J99/hokage-chess/issues/49) — Phase 4 conductor MCP scope-binding (`conductor_session_start` requires `client` param when CWD ∈ client tree)
-- V-D → [#50](https://github.com/4444J99/hokage-chess/issues/50) — Maddie-side parallel substrate (tracking proxy on this repo; actual work lands on `organvm/sovereign-systems--elevate-align`)
+- V-D → [#50](https://github.com/4444J99/hokage-chess/issues/50) — Maddie-side parallel substrate tracking proxy completed here via `docs/archive/orchestration/2026-06-22-maddie-client-separation-substrate-patch.md`; actual work lands on `organvm/sovereign-systems--elevate-align`.
 - V-E → [#51](https://github.com/4444J99/hokage-chess/issues/51) — Cross-scope conventions reconciliation (transcript-routing drift between Maddie convention and this substrate)
 - V-F → [#52](https://github.com/4444J99/hokage-chess/issues/52) — Chezmoi mirror of `~/.local/share/hokage-chess/operational/` (P1, escalated 2026-04-30 — orphan triage added a 4th file)
 
