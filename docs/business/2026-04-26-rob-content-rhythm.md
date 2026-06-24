@@ -50,18 +50,24 @@ Bridge content is the critical connective tissue preventing the two pillars from
     *   "How discipline in daily fitness translates directly to discipline in chess study."
     *   "Opening preparation (Chess) vs. Warm-up routines (Fitness)."
 
-## 5. Time Budget per Pillar (Dependent on MP-10)
+## 5. Time Budget per Pillar (MP-10 applied)
 
-*Note: This section requires final numbers from MP-10 (Rob's actual time budget: hours/week, current allocation, target re-allocation).*
+*Applied numbers from [2026-06-24-mp-10-rob-time-budget.md](2026-06-24-mp-10-rob-time-budget.md): modeled 20h/week total (measured logs pending).*
 
-The production cadence must fundamentally align with the target time reallocation to ensure long-term sustainability. Assuming a hypothetical 20-hour weekly content production budget, the split should structurally mirror the publishing frequency:
+The cadence is now planned against a modeled 20-hour weekly budget:
 
-*   **Chess Pillar (Mon/Wed/Fri):** ~40% of time budget (e.g., 8 hours)
-*   **Fitness Pillar (Tue/Thu):** ~30% of time budget (e.g., 6 hours)
-*   **Bridge Content (Saturday):** ~15% of time budget (e.g., 3 hours)
-*   **Quest Log / Admin (Sunday):** ~15% of time budget (e.g., 3 hours)
+-   **Chess Content (Mon/Wed/Fri):** 40% / 8 hours
+-   **Fitness Content (Tue/Thu):** 30% / 6 hours
+-   **Bridge Content (Saturday):** 15% / 3 hours
+-   **Quest Log + Admin / Buffer (Sunday):** 15% / 3 hours
 
-*Action Item:* Update exact hour allocations once MP-10 is closed and the realistic hour count is finalized.
+### Add-on capacity planning
+
+If CWS-1 goes live, reserve an additional 1.5–2.5h/week from the same 20-hour envelope:
+- shift 1h from the Quest Log/Admin buffer (or reduce frequency for safety weeks)
+- shift 0.5–1.5h from one lower-friction long-form slot
+
+This trade is now explicit in the schedule because MP-10 is no longer hypothetical.
 
 ## 6. Production-Friction Estimates per Format
 
@@ -86,5 +92,5 @@ To sustain the cadence without burnout, we need to estimate the friction (time +
 ## 7. Next Steps
 
 1.  Rob to review and approve the baseline Mon-Sun cadence structure.
-2.  Finalize MP-10 to lock in the exact hours allocated per pillar.
+2.  Reconcile MP-10 measured values (if/when Rob shares logs) and keep MP-2 aligned.
 3.  Draft the first 2 weeks of content (14 atomic posts) following this exact rhythm as a proof-of-concept.

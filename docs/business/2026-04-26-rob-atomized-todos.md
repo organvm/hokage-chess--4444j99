@@ -94,7 +94,7 @@
 | MP-7 | Email list architecture decision [DONE] | Resolved via unified base, two tracks |
 | MP-8 | Wearable integration content plan (Whoop or Oura, when, what content angle) | FWS-6 is the affiliate; this is the content/programming layer |
 | MP-9 | Cohort challenge ritual design (quarterly Legion challenges, paid entry tier) | Implied in fitness world map §7.8; needs spec |
-| MP-10 | Rob's actual time budget (hours/week, current allocation, target re-allocation post-reformation) | Unknown — affects every roadmap |
+| MP-10 | Rob's actual time budget (hours/week, current allocation, target re-allocation post-reformation) | Defined (modeled; full measurement pending) — 20h/week target envelope in [2026-06-24-mp-10-rob-time-budget.md] |
 
 ---
 
