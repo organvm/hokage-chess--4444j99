@@ -23,7 +23,7 @@ This file tracks two distinct vacuum namespaces from different originating sessi
 | V-C | [#49](https://github.com/4444J99/hokage-chess/issues/49) | P2 | Phase 4 conductor MCP scope-binding |
 | V-D | [#50](https://github.com/4444J99/hokage-chess/issues/50) | P1 | Maddie-side parallel substrate (tracking proxy — actual work on Maddie repo) |
 | V-E | [#51](https://github.com/4444J99/hokage-chess/issues/51) | P2 | Cross-scope conventions reconciliation (transcript-routing drift) |
-| V-F | [#52](https://github.com/4444J99/hokage-chess/issues/52) | P1 | Chezmoi mirror of `~/.local/share/hokage-chess/operational/` — ✓ DONE |
+| V-F | [#52](https://github.com/4444J99/hokage-chess/issues/52) | P1 | Chezmoi mirror of `~/.local/share/hokage-chess/operational/` |
 
 Query both at once: `gh issue list --repo 4444J99/hokage-chess --label agent-fix`
 
@@ -254,7 +254,7 @@ User-pasted Maddie-intent session-export ("Editing flow: vacuum gate, quiz copy,
 - V-C → [#49](https://github.com/4444J99/hokage-chess/issues/49) — Phase 4 conductor MCP scope-binding (`conductor_session_start` requires `client` param when CWD ∈ client tree)
 - V-D → [#50](https://github.com/4444J99/hokage-chess/issues/50) — Maddie-side parallel substrate (tracking proxy on this repo; actual work lands on `organvm/sovereign-systems--elevate-align`)
 - V-E → [#51](https://github.com/4444J99/hokage-chess/issues/51) — Cross-scope conventions reconciliation (transcript-routing drift between Maddie convention and this substrate)
-- V-F → [#52](https://github.com/4444J99/hokage-chess/issues/52) — Chezmoi mirror of `~/.local/share/hokage-chess/operational/` (P1) · ✓ DONE 
+- V-F → [#52](https://github.com/4444J99/hokage-chess/issues/52) — Chezmoi mirror of `~/.local/share/hokage-chess/operational/` (P1, escalated 2026-04-30 — orphan triage added a 4th file)
 
 **IRF candidate (NET-NEW, surfaced for Stream-H Gate):** Client-separation substrate row. Domain: META/governance. Priority: P1.
 

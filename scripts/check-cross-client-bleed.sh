@@ -6,18 +6,7 @@ set -euo pipefail
 # This repo is {client:rob} scope. Reject staged content that bleeds {client:maddie} or
 # other client identifiers, except in whitelisted governance/audit-log files.
 
-if [[ -n "${CROSS_CLIENT_KEYWORDS_FILE:-}" && -f "$CROSS_CLIENT_KEYWORDS_FILE" ]]; then
-  # Read non-empty lines, ignoring comments, escape for regex, and join with '|'
-  KEYWORDS_REGEX=$(grep -v '^#' "$CROSS_CLIENT_KEYWORDS_FILE" | grep -v '^[[:space:]]*$' | tr '\n' '|' | sed 's/|$//')
-  # If empty after processing, use a fallback that won't match anything
-  if [[ -z "$KEYWORDS_REGEX" ]]; then
-    KEYWORDS_REGEX="^$"
-  else
-    KEYWORDS_REGEX="($KEYWORDS_REGEX)"
-  fi
-else
-  KEYWORDS_REGEX='(maddie|Maddie|Sovereign Spiral|sovereign-systems|elevatealign\.com|stopdrinkingacid\.com|eaucohub\.com)'
-fi
+KEYWORDS_REGEX='(maddie|Maddie|Sovereign Spiral|sovereign-systems|elevatealign\.com|stopdrinkingacid\.com|eaucohub\.com)'
 
 # Whitelist: files that legitimately reference cross-client keywords (substrate doc itself,
 # audit logs, this guard's own implementation).
@@ -42,13 +31,6 @@ while IFS= read -r file; do
   # `+` is a regex metachar in BSD basic regex, so we use bracket-class literals
   # to keep the pattern portable across BSD grep (macOS default) and GNU grep.
   staged_content=$(git diff --cached -- "$file" | grep -E '^[+]' | grep -v -F '+++' || true)
-  
-  # Check if the staged content contains the explicit cross-stream coordination frontmatter.
-  # If it does, we skip the keyword bleed check for this file.
-  if echo "$staged_content" | grep -q '^+audiences: \[cross_stream_coordination\]'; then
-    continue
-  fi
-
   # Check for keyword match in additions; capture the first matching line for the report.
   first_match=$(echo "$staged_content" | grep -E -i "$KEYWORDS_REGEX" | head -1 || true)
   if [[ -n "$first_match" ]]; then
