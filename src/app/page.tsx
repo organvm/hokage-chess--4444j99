@@ -670,8 +670,7 @@ function FinalCTASection() {
         </h2>
 
         <p className="text-lg text-hokage-light/60 mb-10">
-          Get &ldquo;The 1300 Escape Plan&rdquo; free — plus weekly insights
-          from the climb. No spam. Unsubscribe anytime.
+          Get &ldquo;The 1300 Escape Plan&rdquo; free — plus the <span className="text-white font-medium">Hokage Scroll</span> weekly newsletter. No spam. Unsubscribe anytime.
         </p>
 
         {state.kind === "success" ? (
@@ -721,7 +720,7 @@ function FinalCTASection() {
         )}
 
         <p className="text-xs text-hokage-light/30 mt-4">
-          Free resources. Weekly insights. No spam. Unsubscribe anytime.
+          Free resources. The Hokage Scroll weekly newsletter. No spam. Unsubscribe anytime.
         </p>
       </div>
     </section>
