@@ -40,7 +40,7 @@ It works at localhost:3000. It has NOT been deployed.
 
 1. Deploy to Vercel (the repo is at 4444J99/hokage-chess on GitHub, private)
 2. Check if hokagechess.com is available — if so, register it via Cloudflare
-3. Wire the email capture form in src/app/page.tsx (currently console.log) to Kit (ConvertKit) API
+3. Wire the email capture form in src/app/page.tsx to Beehiiv API
 4. Add OG image metadata for social sharing
 5. Test on mobile (70%+ of YouTube traffic is mobile)
 
@@ -126,7 +126,7 @@ From the Strategic Growth Blueprint + our analysis, Rob's immediate actions are:
 
 WEEK 1-2:
 - Title audit: retitle top 20 videos with emotional hooks, push "Episode X" to end
-- Set up Kit (ConvertKit) free account for The Scroll newsletter
+- Set up Beehiiv free account for the 'Hokage Scroll' weekly newsletter
 - Create "The 1300 Escape Plan" lead magnet PDF (7 positions from his own games)
 - Add lead magnet link to every YouTube video description
 
@@ -181,7 +181,7 @@ to dated versions before syncing.
 | V4 | PDE skill not built | Group 3 | OPEN — out of scope for Stream D execution |
 | V5 | MEMORY.md missing entries | — | FIXED |
 | V6 | Domain not registered | Group 1+4 | OPEN — user action (financial transaction) |
-| V7 | No email funnel | Group 1+4 | IN PROGRESS — form handler wiring + Kit setup runbook (Phase 4) |
+| V7 | No email funnel | Group 1+4 | IN PROGRESS — form handler wiring + Beehiiv setup runbook (Phase 4) |
 | V8 | Landing page not deployed | Group 1 | IN PROGRESS — OG asset + mobile QA + Vercel preflight doc (Phase 3); deploy gated on user auth |
 | V9 | 54 plans unsynced to chezmoi | Group 5 | OPEN — out of scope for Stream D execution |
 | V10 | IRF not updated | Group 2 | IN PROGRESS — Stream H Reconciliation Gate at session close |
