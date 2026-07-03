@@ -64,7 +64,7 @@ Beyond `substrate/bodi/` and `archive/`, the repo carries dated working material
 - `docs/manifests/` — project-manifest annotated bibliography (`.jsonl` + `.md`). Regenerate via `python3 tools/project_manifest.py`; the generator script is preserved in `tools/` for repeatable refreshes. **Caveat:** current `EXCLUDED_DIRS` does NOT exclude `.history/`, `.lh/`, `.gemini/` — drift counts are inflated by editor-history noise until that's patched (see `docs/reviews/2026-04-30-eval-to-growth-master.md` §1.6 / §A.2).
 - `docs/reviews/` — periodic master reviews structured by the Evaluation-to-Growth framework (Critique → Logic → Logos → Pathos → Ethos → Blind Spots → Shatter Points → Bloom → Evolve). Most recent review carries the canonical next-session work queue (§9.2 register). Append-only — never overwrite; new dates supersede.
 - `docs/superpowers/intakes/` — superpower intake material.
-- `docs/governance/` — meta-governance documents. v0: `client-separation-substrate.md` (the 4-zone containment topology cited in `## Client-Separation Substrate` below). v0 hosted here for session-scope reasons; canonical home is workspace-wide meta-governance (Phase 3 deferred).
+- `docs/governance/` — meta-governance documents. (Note: `client-separation-substrate.md` has been promoted to its canonical home at `~/workspace/meta-organvm/governance/client-separation-substrate.md`).
 - `docs/ROB-FIRST-30-DAYS.md` — top-level engagement plan for the Rob client engagement.
 
 ### Research lineage (`research/apex-predator-parent-architecture/`)
@@ -120,7 +120,7 @@ Last-known-green: ≈80 tests across 6 suites, build emits ≈10 routes. Both mu
 
 ## Client-Separation Substrate
 
-Client information must never bleed across clients or into public surfaces. The four zones (`public:all`, `(me)`, `{client:rob}`, `{client:maddie}`) and their flow rules are documented at `docs/governance/client-separation-substrate.md`. Read that doc before triaging any cross-scope artifact, before pasting external session content into a chat bound to this repo, or before writing files that name another client. Routing rule: route by content / scope-of-generation (R1), not by user-declared intent. Live-paste rule: if cross-client material lands in this scope's chat, refuse to operationalize, suggest correct routing, never absorb the wrong-scope content into auto-memory.
+Client information must never bleed across clients or into public surfaces. The four zones (`public:all`, `(me)`, `{client:rob}`, `{client:maddie}`) and their flow rules are documented at `~/workspace/meta-organvm/governance/client-separation-substrate.md`. Read that doc before triaging any cross-scope artifact, before pasting external session content into a chat bound to this repo, or before writing files that name another client. Routing rule: route by content / scope-of-generation (R1), not by user-declared intent. Live-paste rule: if cross-client material lands in this scope's chat, refuse to operationalize, suggest correct routing, never absorb the wrong-scope content into auto-memory.
 
 ## What NOT to do
 
