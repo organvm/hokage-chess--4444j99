@@ -7,8 +7,8 @@ implementation: ACTIVE
 produces: []
 consumes: []
 description: "Client engagement for Rob Bonavoglia (@HokageChess); landing page + business model + course catalog"
+client: "Rob Bonavoglia"
 metadata:
-  client: "Rob Bonavoglia"
   brand: "Hokage Chess"
   channel: "https://www.youtube.com/@HokageChess"
   dual_purpose: true
