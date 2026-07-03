@@ -22,6 +22,7 @@
 | **Value** | **Whoop / Oura** | Wearable data for bio-syncing plans | `PROVISIONAL` |
 | **Monetization** | **Whop** | Digital product marketplace (Trading/Chess) | `PROVISIONAL` |
 | **Community** | **Skool / Circle** | Gamified education portal | `PROVISIONAL` |
+| **Coaching** | **TrueCoach** | 1:1 programming, check-ins, payments | `PROVISIONAL` |
 
 ## Performance Rhythms (KPIs)
 
