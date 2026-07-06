@@ -115,6 +115,17 @@ describe("cross-client bleed guard", () => {
     expect(runGuard(repo)).toBe("");
   });
 
+  it("rejects cross-stream coordination markers outside frontmatter", () => {
+    const repo = createRepo();
+    writeAndStage(
+      repo,
+      "docs/body-marker.md",
+      `body marker audiences: [cross_stream_coordination]\n${blockedTerm}\n`,
+    );
+
+    expect(expectGuardFailure(repo)).toContain("docs/body-marker.md");
+  });
+
   it("supports overriding the keyword config path", () => {
     const repo = createRepo();
     const customTerm = ["other", "client"].join("-");

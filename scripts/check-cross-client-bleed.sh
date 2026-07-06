@@ -6,11 +6,47 @@ set -euo pipefail
 # This repo is {client:rob} scope. Reject staged content that bleeds {client:maddie} or
 # other client identifiers, except in whitelisted governance/audit-log files.
 
-KEYWORDS_REGEX='(maddie|Maddie|Sovereign Spiral|sovereign-systems|elevatealign\.com|stopdrinkingacid\.com|eaucohub\.com)'
+DEFAULT_KEYWORDS_REGEX='(maddie|Maddie|Sovereign Spiral|sovereign-systems|elevatealign\.com|stopdrinkingacid\.com|eaucohub\.com)'
+KEYWORDS_FILE="${CROSS_CLIENT_KEYWORDS_FILE:-config/cross-client-keywords.txt}"
+configured_patterns=""
+
+if [[ -f "$KEYWORDS_FILE" ]]; then
+  configured_patterns=$(grep -Ev '^[[:space:]]*(#|$)' "$KEYWORDS_FILE" | paste -sd '|' - || true)
+fi
+
+if [[ -n "$configured_patterns" ]]; then
+  KEYWORDS_REGEX="($configured_patterns)"
+else
+  KEYWORDS_REGEX="$DEFAULT_KEYWORDS_REGEX"
+fi
 
 # Whitelist: files that legitimately reference cross-client keywords (substrate doc itself,
 # audit logs, this guard's own implementation).
 WHITELIST_REGEX='^(docs/governance/client-separation-substrate\.md|docs/governance/CANONICAL-HOME-ANCHOR\.md|scripts/check-cross-client-bleed\.sh|HANDOFF\.md|\.conductor/active-handoff\.md|docs/archive/.*|\.claude/plans/.*)$'
+
+has_cross_stream_coordination_frontmatter() {
+  local file="$1"
+  local line
+  local line_no=0
+  local found=0
+
+  while IFS= read -r line; do
+    line_no=$((line_no + 1))
+    if [[ $line_no -eq 1 ]]; then
+      [[ "$line" == "---" ]] || return 1
+      continue
+    fi
+    if [[ "$line" == "---" ]]; then
+      [[ $found -eq 1 ]] && return 0
+      return 1
+    fi
+    if [[ "$line" =~ audiences:[[:space:]]*\[[^]]*cross_stream_coordination[^]]*\] ]]; then
+      found=1
+    fi
+  done < <(git show ":$file" 2>/dev/null || true)
+
+  return 1
+}
 
 # Get staged files (not yet committed)
 staged_files=$(git diff --cached --name-only --diff-filter=ACMR)
@@ -25,6 +61,9 @@ while IFS= read -r file; do
   [[ -z "$file" ]] && continue
   # Skip whitelisted files
   if [[ "$file" =~ $WHITELIST_REGEX ]]; then
+    continue
+  fi
+  if has_cross_stream_coordination_frontmatter "$file"; then
     continue
   fi
   # Get the staged content of this file (additions only, excluding diff header markers).
