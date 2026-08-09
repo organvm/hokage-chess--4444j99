@@ -35,6 +35,7 @@ Three priorities: tighten what people see (titles, thumbnails), capture what the
 ### Week 3–4: Community + Cadence
 
 **Discord — "The Village"**
+- Current canonical taxonomy: `docs/content/2026-06-22-cws-2-discord-hidden-leaf-village.md`. The first-30-day launch remains intentionally small; the CWS-2 spec adds the paid Chunin Exams and $150/mo Jonin Mentorship lanes.
 - Three role tiers, rating-banded:
   - **Genin** (0–1199 ELO) — newcomers, the largest tier
   - **Chunin** (1200–1599 ELO) — your current tribe, the climb-mates
@@ -44,7 +45,7 @@ Three priorities: tighten what people see (titles, thumbnails), capture what the
   - `#sparring-partners` — pairing-up channel for games
   - `#study-hall` — focus rooms, accountability check-ins
 - Keep it small for the first 30 days. 50 active members beats 500 ghosts. Curate, don't broadcast.
-- **Naming note:** Genin/Chunin/Jonin are DUAL-USE on purpose. In Discord they're free rating-banded roles. When the paid tier ships (Phase 2), the same names become product tiers — Genin Squad ($9/mo), Chunin Dojo ($29/mo), Jonin Mentorship ($99/mo). One brand vocabulary across community + commerce.
+- **Naming note:** Genin/Chunin/Jonin are DUAL-USE on purpose. In Discord they're free rating-banded roles. Paid access should stack as entitlement roles, not replace rank identity: Chunin Exams for the ChessDojo-style paid training tier, Jonin Mentorship for the planned $150/mo high-touch offer. One brand vocabulary across community + commerce.
 
 **Two recurring named formats — Bridge Content (PRT-040)**
 - **Jutsu of the Week** — Tuesday cadence, single chess technique, 8–12 min YouTube + 60–90 s Shorts re-cut. Below in the Shorts section. Anchors the weekly content rhythm.
