@@ -20,7 +20,7 @@ node scripts/generate-og-image.mjs             # Regenerate OG images
 
 - **`src/lib/content-strategy.ts`** — Universal title/thumbnail scoring. Brand-agnostic. Do NOT bake "chess" or "Hokage" terms into the core.
 - **`src/lib/landing-engine/`** — Persona × Narrative × Section primitives. Adding to `personas.ts` auto-generates `/for/<id>` routes.
-- **`src/app/api/subscribe/route.ts`** — ConvertKit email handler. Requires `CONVERTKIT_API_KEY` env var.
+- **`src/app/api/subscribe/route.ts`** — Beehiiv email handler for Hokage Scroll. Requires `BEEHIIV_API_KEY` and `BEEHIIV_PUBLICATION_ID` env vars.
 - **`src/app/for/[persona]/page.tsx`** — Dynamic persona routes via `generateStaticParams`.
 
 ## Next.js 16 specifics
